@@ -1,0 +1,307 @@
+/* Games — Tic Tac Toe & Snakes & Ladders */
+
+.games-tab-btn.active {
+  background: linear-gradient(135deg, #f472b6, #ec4899);
+  border-color: #ec4899;
+  color: var(--white);
+}
+
+/* Tic Tac Toe */
+.ttt-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.ttt-status {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  min-height: 2rem;
+}
+
+.ttt-players {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ttt-player {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--cream);
+  font-weight: 700;
+  opacity: 0.5;
+  transition: all 0.25s;
+}
+
+.ttt-player.active {
+  opacity: 1;
+  box-shadow: var(--shadow);
+  transform: scale(1.05);
+}
+
+.ttt-player.p1.active { background: #d1fae5; border: 2px solid var(--green-dark); }
+.ttt-player.p2.active { background: #fce7f3; border: 2px solid #ec4899; }
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(80px, 110px));
+  gap: 8px;
+  padding: 12px;
+  background: linear-gradient(145deg, #2a9d8f, #4ecdc4);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+.ttt-cell {
+  aspect-ratio: 1;
+  background: var(--white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s, background 0.15s;
+  font-family: var(--font-display);
+}
+
+.ttt-cell:hover:not(:disabled) {
+  transform: scale(1.06);
+  background: #f0fdf4;
+}
+
+.ttt-cell:disabled { cursor: default; }
+.ttt-cell.x { color: var(--green-dark); }
+.ttt-cell.o { color: #ec4899; }
+.ttt-cell.win { background: #fef08a; animation: pop 0.4s ease; }
+
+.ttt-controls {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.ttt-mode label {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.ttt-mode select {
+  font-family: var(--font-body);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 2px solid var(--sky);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Snakes & Ladders */
+.snl-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.snl-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.snl-player-card {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.2rem;
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  box-shadow: var(--shadow);
+  font-weight: 700;
+  transition: all 0.3s;
+  border: 3px solid transparent;
+}
+
+.snl-player-card.active {
+  border-color: var(--sun-dark);
+  transform: scale(1.04);
+  box-shadow: var(--shadow-lg);
+}
+
+.snl-player-card .token-icon { font-size: 1.8rem; }
+
+.snl-dice-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.snl-dice {
+  width: 72px;
+  height: 72px;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 6px 0 #cbd5e1, var(--shadow-lg);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding: 10px;
+  gap: 4px;
+  cursor: pointer;
+  transition: transform 0.1s;
+  user-select: none;
+}
+
+.snl-dice:hover:not(.rolling):not(.disabled) { transform: translateY(-2px); }
+.snl-dice:active:not(.rolling):not(.disabled) { transform: translateY(4px); box-shadow: 0 2px 0 #cbd5e1; }
+.snl-dice.rolling { animation: dice-shake 0.5s ease infinite; }
+.snl-dice.disabled { opacity: 0.6; cursor: not-allowed; }
+
+@keyframes dice-shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-8deg); }
+  75% { transform: rotate(8deg); }
+}
+
+.snl-dice .dot {
+  width: 12px;
+  height: 12px;
+  background: var(--ink);
+  border-radius: 50%;
+  margin: auto;
+  opacity: 0;
+}
+
+.snl-dice.show-1 .dot:nth-child(5) { opacity: 1; }
+.snl-dice.show-2 .dot:nth-child(1), .snl-dice.show-2 .dot:nth-child(9) { opacity: 1; }
+.snl-dice.show-3 .dot:nth-child(1), .snl-dice.show-3 .dot:nth-child(5), .snl-dice.show-3 .dot:nth-child(9) { opacity: 1; }
+.snl-dice.show-4 .dot:nth-child(1), .snl-dice.show-4 .dot:nth-child(3), .snl-dice.show-4 .dot:nth-child(7), .snl-dice.show-4 .dot:nth-child(9) { opacity: 1; }
+.snl-dice.show-5 .dot:nth-child(1), .snl-dice.show-5 .dot:nth-child(3), .snl-dice.show-5 .dot:nth-child(5), .snl-dice.show-5 .dot:nth-child(7), .snl-dice.show-5 .dot:nth-child(9) { opacity: 1; }
+.snl-dice.show-6 .dot:nth-child(1), .snl-dice.show-6 .dot:nth-child(3), .snl-dice.show-6 .dot:nth-child(4), .snl-dice.show-6 .dot:nth-child(6), .snl-dice.show-6 .dot:nth-child(7), .snl-dice.show-6 .dot:nth-child(9) { opacity: 1; }
+
+.snl-roll-hint {
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  font-weight: 600;
+}
+
+.snl-board-outer {
+  position: relative;
+  width: min(520px, 95vw);
+  padding: 12px;
+  background: linear-gradient(145deg, #7c3aed, #a78bfa);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
+.snl-board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 2px;
+  aspect-ratio: 1;
+  background: #e2e8f0;
+  border-radius: var(--radius-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.snl-cell {
+  position: relative;
+  font-size: clamp(0.45rem, 1.8vw, 0.7rem);
+  font-weight: 700;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2px 3px;
+  border-radius: 3px;
+  min-height: 0;
+}
+
+.snl-cell.light { background: #fef9c3; }
+.snl-cell.dark { background: #fde68a; }
+.snl-cell.start { background: #bbf7d0; }
+.snl-cell.finish { background: linear-gradient(135deg, #fcd34d, #f59e0b); font-weight: 800; }
+
+.snl-cell .cell-num { opacity: 0.7; line-height: 1; }
+.snl-cell .cell-icon { position: absolute; bottom: 1px; right: 1px; font-size: clamp(0.6rem, 2vw, 0.85rem); }
+
+.snl-tokens-layer {
+  position: absolute;
+  inset: 12px;
+  pointer-events: none;
+  border-radius: var(--radius-sm);
+}
+
+.snl-token {
+  position: absolute;
+  font-size: clamp(1.1rem, 4vw, 1.6rem);
+  transform: translate(-50%, -50%);
+  transition: left 0.35s ease-in-out, top 0.35s ease-in-out;
+  z-index: 10;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.snl-token.hopping { animation: token-hop 0.35s ease; }
+.snl-token.sliding { transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1), top 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+
+@keyframes token-hop {
+  50% { transform: translate(-50%, -70%) scale(1.15); }
+}
+
+.snl-svg-overlay {
+  position: absolute;
+  inset: 12px;
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.snl-message {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  min-height: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  max-width: 500px;
+}
+
+.snl-message.snake { background: #fee2e2; color: #b91c1c; }
+.snl-message.ladder { background: #d1fae5; color: #047857; }
+.snl-message.win { background: #fef08a; color: #854d0e; }
+
+.snl-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .ttt-board { grid-template-columns: repeat(3, minmax(70px, 90px)); }
+  .ttt-cell { font-size: 2.2rem; }
+  .snl-player-card { padding: 0.5rem 0.85rem; font-size: 0.85rem; }
+}

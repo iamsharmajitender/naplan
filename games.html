@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="base-path" content="">
-  <title>Writing Workshop — NAPLAN Adventure</title>
+  <title>Games — NAPLAN Adventure</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/games.css">
 </head>
 <body>
   <header class="site-header">
@@ -39,14 +40,25 @@
 
   <main>
     <section class="page-hero">
-      <div class="page-icon">✏️</div>
-      <h1>Writing Workshop</h1>
-      <p>Year 3 NAPLAN writing is on paper for 40 minutes. Practise with prompts, a story planner, and a timer!</p>
+      <div class="page-icon">🎮</div>
+      <h1>Game Zone</h1>
+      <p>Take a fun break! Play Tic Tac Toe or race up Snakes & Ladders.</p>
     </section>
 
     <div class="container">
-      <div class="parent-tip">💡 Parent tip: Don't correct every spelling during practice. Let ideas flow first, then edit together at the end.</div>
-      <div id="writing-prompts"></div>
+      <div class="parent-tip">💡 Parent tip: A short game break between NAPLAN practice keeps learning fun. Snakes & Ladders is great for counting and patience!</div>
+
+      <div class="activity-tabs">
+        <button class="tab-btn games-tab-btn active" data-panel="panel-ttt">Tic Tac Toe</button>
+        <button class="tab-btn games-tab-btn" data-panel="panel-snl">Snakes & Ladders</button>
+      </div>
+
+      <div id="panel-ttt" class="activity-panel active">
+        <div id="ttt-game"></div>
+      </div>
+      <div id="panel-snl" class="activity-panel">
+        <div id="snl-game"></div>
+      </div>
     </div>
   </main>
 
@@ -55,6 +67,6 @@
   </footer>
 
   <script src="assets/js/progress.js"></script>
-  <script src="assets/js/app.js"></script>
+  <script src="assets/js/games.js"></script>
 </body>
 </html>

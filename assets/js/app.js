@@ -1,7 +1,7 @@
 class QuizEngine {
   constructor(containerId, questions, options = {}) {
     this.container = document.getElementById(containerId);
-    this.questions = questions;
+    this.questions = shuffleArray(questions);
     this.domain = options.domain || 'reading';
     this.currentIndex = 0;
     this.answered = false;
@@ -13,6 +13,7 @@ class QuizEngine {
   render() {
     if (!this.container || this.questions.length === 0) return;
     const q = this.questions[this.currentIndex];
+    const choices = shuffleArray(q.choices);
     this.answered = false;
 
     this.container.innerHTML = `
@@ -30,7 +31,7 @@ class QuizEngine {
         ${q.image ? `<div style="text-align:center;font-size:3rem;margin:1rem 0">${q.image}</div>` : ''}
         <p class="question-text">${q.question}</p>
         <div class="choices" id="quiz-choices">
-          ${q.choices.map((c, i) => `
+          ${choices.map((c, i) => `
             <button class="choice" data-index="${i}" data-correct="${c.correct}">
               ${c.text}
             </button>
@@ -74,9 +75,9 @@ class QuizEngine {
     if (isCorrect) {
       awardStar(this.domain, q.id);
       feedback.classList.add('success');
-      feedback.textContent = `${randomItem(ENCOURAGEMENTS)} ${q.explanation || ''}`;
+      feedback.textContent = cheerOnCorrect(q.explanation || '');
       if (this.currentIndex === this.questions.length - 1) {
-        setTimeout(() => showCelebration('You finished all the questions!', '🌟'), 600);
+        setTimeout(() => showCelebration(`${getChildName()}, you finished all the questions!`, '🌟'), 600);
       }
     } else {
       feedback.classList.add('hint');
@@ -95,7 +96,25 @@ class QuizEngine {
       this.render();
     } else if (this.onComplete) {
       this.onComplete();
+    } else {
+      this.showPlayAgain();
     }
+  }
+
+  showPlayAgain() {
+    this.container.innerHTML = `
+      <div class="quiz-card" style="text-align:center">
+        <div style="font-size:4rem;margin-bottom:0.5rem">🌟</div>
+        <h2>All done!</h2>
+        <p style="margin:1rem 0;color:var(--ink-light)">Great work! Want to try again with new questions?</p>
+        <button class="btn btn-primary" id="quiz-restart">Shuffle & Play Again</button>
+      </div>
+    `;
+    document.getElementById('quiz-restart')?.addEventListener('click', () => {
+      this.questions = shuffleArray(this.questions);
+      this.currentIndex = 0;
+      this.render();
+    });
   }
 }
 
@@ -137,7 +156,8 @@ async function initSpellingGame() {
   const container = document.getElementById('spelling-game');
   if (!container) return;
   try {
-    spellingData = await loadQuizData('data/spelling-year3.json');
+    spellingData = shuffleArray(await loadQuizData('data/spelling-year3.json'));
+    spellingIndex = 0;
     renderSpellingRound();
   } catch {
     container.innerHTML = '<p>Could not load spelling words.</p>';
@@ -195,7 +215,7 @@ function renderSpellingRound() {
 
     if (answer === correct) {
       feedback.classList.add('success');
-      feedback.textContent = `${randomItem(ENCOURAGEMENTS)} "${word.word}" is correct!`;
+      feedback.textContent = cheerOnCorrect(`"${word.word}" is correct!`);
       const progress = getProgress();
       progress.language.spelling++;
       progress.language.correct++;
@@ -212,6 +232,9 @@ function renderSpellingRound() {
 
   document.getElementById('next-spelling')?.addEventListener('click', () => {
     spellingIndex++;
+    if (spellingIndex > 0 && spellingIndex % spellingData.length === 0) {
+      spellingData = shuffleArray(spellingData);
+    }
     renderSpellingRound();
   });
 }
@@ -272,7 +295,7 @@ function initWordScramble() {
           feedback.classList.remove('hidden', 'success', 'hint');
           if (attempt === currentWord) {
             feedback.classList.add('success');
-            feedback.textContent = `${randomItem(ENCOURAGEMENTS)} The word is "${currentWord}"!`;
+            feedback.textContent = cheerOnCorrect(`The word is "${currentWord}"!`);
             awardStar('language', 'scramble-' + currentWord);
             setTimeout(() => {
               currentWord = randomItem(words.filter((w) => w !== currentWord));
@@ -368,7 +391,7 @@ function initShopGame() {
       recordAttempt('numeracy');
       if (Math.abs(total - target) < 0.01) {
         feedback.classList.add('success');
-        feedback.textContent = `${randomItem(ENCOURAGEMENTS)} $${target.toFixed(2)} — perfect!`;
+        feedback.textContent = cheerOnCorrect(`$${target.toFixed(2)} — perfect!`);
         awardStar('numeracy', 'shop-' + Date.now());
       } else {
         feedback.classList.add('hint');
@@ -386,13 +409,13 @@ function initShapeGame() {
   const container = document.getElementById('shape-game');
   if (!container) return;
 
-  const rounds = [
+  let rounds = shuffleArray([
     { question: 'Which shape has 4 equal sides?', shapes: ['🔺', '⬜', '🔵', '⭐'], correct: 1, name: 'square' },
     { question: 'Which shape has 3 sides?', shapes: ['🔺', '⬜', '🔷', '⬛'], correct: 0, name: 'triangle' },
     { question: 'Which shape is round with no corners?', shapes: ['🔶', '🔴', '⬜', '🔺'], correct: 1, name: 'circle' },
     { question: 'Which shape has 6 sides?', shapes: ['⬡', '⬜', '🔺', '🔵'], correct: 0, name: 'hexagon' },
     { question: 'Which 3D shape looks like a ball?', shapes: ['🎲', '⚽', '📦', '🥫'], correct: 1, name: 'sphere' },
-  ];
+  ]);
 
   let idx = 0;
 
@@ -425,7 +448,7 @@ function initShapeGame() {
         if (chosen === r.correct) {
           opt.classList.add('correct');
           feedback.classList.add('success');
-          feedback.textContent = `${randomItem(ENCOURAGEMENTS)} That's a ${r.name}!`;
+          feedback.textContent = cheerOnCorrect(`That's a ${r.name}!`);
           awardStar('numeracy', 'shape-' + r.name);
           document.getElementById('shape-next').style.display = 'inline-flex';
         } else {
@@ -439,6 +462,9 @@ function initShapeGame() {
 
     document.getElementById('shape-next')?.addEventListener('click', () => {
       idx++;
+      if (idx > 0 && idx % rounds.length === 0) {
+        rounds = shuffleArray(rounds);
+      }
       render();
     });
   }
@@ -457,11 +483,11 @@ function initGraphGame() {
   };
 
   const maxVal = Math.max(...data.values);
-  const questions = [
+  let questions = shuffleArray([
     { q: 'On which day were the most books read?', a: 'Thursday', check: (ans) => ans === 'Thursday' },
     { q: 'How many books were read on Tuesday?', a: '7', check: (ans) => ans === '7' },
     { q: 'How many more books were read on Thursday than Monday?', a: '5', check: (ans) => ans === '5' },
-  ];
+  ]);
 
   let qIdx = 0;
 
@@ -500,9 +526,12 @@ function initGraphGame() {
 
       if (q.check(ans)) {
         feedback.classList.add('success');
-        feedback.textContent = `${randomItem(ENCOURAGEMENTS)} The answer is ${q.a}!`;
+        feedback.textContent = cheerOnCorrect(`The answer is ${q.a}!`);
         awardStar('numeracy', 'graph-' + qIdx);
         qIdx++;
+        if (qIdx > 0 && qIdx % questions.length === 0) {
+          questions = shuffleArray(questions);
+        }
         setTimeout(render, 1500);
       } else {
         feedback.classList.add('hint');
@@ -573,7 +602,7 @@ function initNumberLine() {
       recordAttempt('numeracy');
       if (pos === target) {
         feedback.classList.add('success');
-        feedback.textContent = `${randomItem(ENCOURAGEMENTS)} You reached ${target} in ${hops} hops!`;
+        feedback.textContent = cheerOnCorrect(`You reached ${target} in ${hops} hops!`);
         awardStar('numeracy', 'nl-' + target);
         setTimeout(newRound, 2000);
       } else {
@@ -590,7 +619,7 @@ function initWritingPrompts() {
   const container = document.getElementById('writing-prompts');
   if (!container) return;
 
-  const prompts = [
+  const prompts = shuffleArray([
     { type: 'narrative', title: 'A Day at St Kilda Beach', text: 'Write a story about a special day you spent at the beach. What did you see, hear, and feel?' },
     { type: 'narrative', title: 'The Lost Puppy', text: 'Write a story about finding a lost puppy in your neighbourhood. How did you help it get home?' },
     { type: 'narrative', title: 'My Best Friend', text: 'Write a story about an adventure you had with your best friend. What happened?' },
@@ -603,7 +632,7 @@ function initWritingPrompts() {
     { type: 'persuasive', title: 'Pet in the Classroom', text: 'Should classes be allowed to have a class pet? Write to convince your teacher.' },
     { type: 'persuasive', title: 'Ride Your Bike', text: 'Write to persuade families to ride bikes instead of driving short distances.' },
     { type: 'persuasive', title: 'Library Day', text: 'Should every class visit the library once a week? Write your opinion with reasons.' },
-  ];
+  ]);
 
   let current = 0;
 
@@ -652,7 +681,8 @@ function initWritingPrompts() {
           const progress = getProgress();
           progress.writing.checklistsDone++;
           saveProgress(progress);
-          showCelebration('Writing checklist complete!', '✏️');
+          cheerOnCorrect('Writing checklist complete!');
+          showCelebration(`${getChildName()}, writing checklist complete!`, '✏️');
         }
       });
     });
@@ -671,7 +701,7 @@ function initWritingPrompts() {
           `${m}:${s.toString().padStart(2, '0')}`;
         if (seconds <= 0) {
           clearInterval(timerInterval);
-          showCelebration('Time\'s up! Great effort!', '⏰');
+          showCelebration(`${getChildName()}, time's up! Great effort!`, '⏰');
         }
       }, 1000);
     });
@@ -694,7 +724,7 @@ function initPunctuationGame() {
   const container = document.getElementById('punctuation-game');
   if (!container) return;
 
-  const sentences = [
+  let sentences = shuffleArray([
     {
       parts: ['Where is my hat', ' she asked'],
       options: ['.', '?', '!'],
@@ -719,12 +749,13 @@ function initPunctuationGame() {
       correct: '?',
       fixed: 'Can you help me? asked Tom.',
     },
-  ];
+  ]);
 
   let idx = 0;
 
   function render() {
     const s = sentences[idx % sentences.length];
+    const options = shuffleArray(s.options);
     container.innerHTML = `
       <div class="quiz-card punctuation-game">
         <div class="mascot-speech">
@@ -735,7 +766,7 @@ function initPunctuationGame() {
           ${s.parts[0]}<span id="punct-slot" style="border-bottom:3px solid var(--purple);padding:0 0.5rem">?</span>${s.parts[1]}
         </p>
         <div style="display:flex;gap:0.75rem;justify-content:center">
-          ${s.options.map((o) => `<button class="btn btn-secondary punct-btn" data-val="${o}" style="font-size:1.5rem;min-width:60px">${o}</button>`).join('')}
+          ${options.map((o) => `<button class="btn btn-secondary punct-btn" data-val="${o}" style="font-size:1.5rem;min-width:60px">${o}</button>`).join('')}
         </div>
         <div id="punct-feedback" class="feedback hidden"></div>
       </div>
@@ -750,9 +781,12 @@ function initPunctuationGame() {
 
         if (btn.dataset.val === s.correct) {
           feedback.classList.add('success');
-          feedback.textContent = `${randomItem(ENCOURAGEMENTS)} ${s.fixed}`;
+          feedback.textContent = cheerOnCorrect(s.fixed);
           awardStar('language', 'punct-' + idx);
           idx++;
+          if (idx > 0 && idx % sentences.length === 0) {
+            sentences = shuffleArray(sentences);
+          }
           setTimeout(render, 2000);
         } else {
           feedback.classList.add('hint');
