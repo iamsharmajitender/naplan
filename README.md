@@ -1,19 +1,43 @@
 # NAPLAN Adventure — Year 3
 
-A fun, interactive practice website for **Year 3 NAPLAN** preparation, designed for kids in **Melbourne, Australia**. Built for NAPLAN 2027 and aligned to the four test domains: Reading, Writing, Conventions of Language, and Numeracy.
+A fun, interactive practice website for **Year 3 NAPLAN** preparation, built for kids in **Melbourne, Australia** (NAPLAN 2027).
 
-**Not affiliated with ACARA, VCAA, or NAPLAN.** This is an independent practice resource using original content.
+**Live site:** [https://iamsharmajitender.github.io/naplan/](https://iamsharmajitender.github.io/naplan/)
 
-## Features
 
-- **Reading Reef** — 8 Melbourne-themed reading passages with comprehension questions
-- **Writing Workshop** — 12 narrative & persuasive prompts, story planner, 40-min timer, printable prompts
-- **Language Lagoon** — Spelling bee, grammar quiz, punctuation game, word scramble
-- **Number Neighbourhood** — Maths quiz, milk bar shop game, shapes, graphs, number line
-- **Progress tracking** — Stars, badges, and streaks saved in the browser (no login)
-- **Parent mode** — Toggle parent tips on any page
+> **Not affiliated with ACARA, VCAA, or NAPLAN.** This is an independent practice resource with original content styled to match the real test areas.
 
-## Try it locally
+---
+
+## What is this site?
+
+**NAPLAN Adventure** helps Year 3 students practise literacy and numeracy in a kid-friendly way — without feeling like a stressful cram app. Kids explore four learning “worlds” plus a game zone, earn stars and badges, and get cheered on with confetti and encouragement after every correct answer.
+
+On first visit, children enter their name to start a session. Progress (stars, badges, streaks) is saved in the browser — no login required.
+
+### Learning areas (aligned to NAPLAN Year 3)
+
+| Area | What it covers |
+|------|----------------|
+| **Reading Reef** | Melbourne-themed stories with comprehension questions |
+| **Writing Workshop** | Narrative & persuasive prompts, story planner, 40-min timer (matches paper writing test) |
+| **Language Lagoon** | Spelling, grammar, punctuation — Conventions of Language |
+| **Number Neighbourhood** | Number, money, shapes, graphs — Numeracy |
+| **Game Zone** | Tic Tac Toe and Snakes & Ladders for fun breaks |
+| **Progress** | Stars, badges, day streaks, and per-subject progress |
+
+### Extra features
+
+- **Parent tips** toggle on every page
+- **Personalised encouragement** — graffiti, stars, superhero emojis, and confetti on correct answers
+- **Randomised questions** — order shuffles each session
+- **Mobile & tablet friendly** — works on iPad and laptop
+
+---
+
+## Run locally
+
+A local server is required because quizzes load question data from JSON files.
 
 ```bash
 cd naplan
@@ -22,45 +46,48 @@ python3 -m http.server 8080
 
 Open [http://localhost:8080](http://localhost:8080)
 
-> A local server is needed because quizzes load JSON data via `fetch`.
-
-## Host on GitHub Pages
-
-1. Create a new GitHub repository (e.g. `naplan`)
-2. Push this folder to the repo:
+**Alternative (Node.js):**
 
 ```bash
-git init
-git add .
-git commit -m "Add NAPLAN Adventure Year 3 practice site"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/naplan.git
-git push -u origin main
+npx serve .
 ```
 
-3. Go to **Settings → Pages**
-4. Under **Build and deployment**, set **Source** to **GitHub Actions**
-5. The workflow in `.github/workflows/pages.yml` will deploy automatically on push
+---
 
-Your site will be live at:
+## Deploy on GitHub Pages
 
-`https://YOUR_USERNAME.github.io/naplan/`
+This project is already set up for GitHub Pages via GitHub Actions (`.github/workflows/pages.yml`).
+
+1. Push changes to the `main` branch
+2. In the repo go to **Settings → Pages → Source: GitHub Actions**
+3. The site deploys automatically after each push
+
+**Live URL:** [https://iamsharmajitender.github.io/naplan/](https://iamsharmajitender.github.io/naplan/)
+
+---
 
 ## Project structure
 
 ```
 naplan/
-├── index.html              # Adventure map home page
+├── index.html              # Home — adventure map
 ├── reading.html            # Reading activities
 ├── writing.html            # Writing prompts & planner
 ├── language.html           # Spelling, grammar, punctuation
 ├── numeracy.html           # Maths games & quiz
+├── games.html              # Tic Tac Toe & Snakes & Ladders
 ├── progress.html           # Stars, badges, streaks
-├── assets/css/style.css
-├── assets/js/progress.js   # Progress & badges
-├── assets/js/app.js        # Games & quizzes
+├── assets/
+│   ├── css/style.css
+│   ├── css/games.css
+│   └── js/
+│       ├── progress.js     # Session, progress, cheers
+│       ├── app.js          # Quizzes & activities
+│       └── games.js        # Board games
 └── data/                   # Question banks (JSON)
 ```
+
+---
 
 ## Adding more questions
 
@@ -71,10 +98,14 @@ Edit the JSON files in `data/`:
 - `grammar-year3.json` — grammar questions
 - `spelling-year3.json` — spelling words with hints
 
+---
+
 ## Official NAPLAN resources
 
 - [NAPLAN parent information](https://www.nap.edu.au/naplan/parent-carer-support)
 - [VCAA NAPLAN (Victoria)](https://www.vcaa.vic.edu.au/assessment/foundation-10/naplan)
+
+---
 
 ## Licence
 
