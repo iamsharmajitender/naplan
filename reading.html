@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="base-path" content="">
+  <title>Reading Reef — NAPLAN Adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🐨</span>
+        <span class="logo-text">NAPLAN Adventure</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reading.html">Reading</a></li>
+          <li><a href="writing.html">Writing</a></li>
+          <li><a href="language.html">Language</a></li>
+          <li><a href="numeracy.html">Numeracy</a></li>
+          <li><a href="progress.html">Progress</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:1rem">
+        <label class="parent-toggle">
+          <input type="checkbox" id="parent-mode"> Parent tips
+        </label>
+        <div class="stars-badge">⭐ <span id="total-stars">0</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-icon">📚</div>
+      <h1>Reading Reef</h1>
+      <p>Read stories about Melbourne and Australia, then answer questions — just like NAPLAN reading!</p>
+    </section>
+
+    <div class="container">
+      <div class="parent-tip">💡 Parent tip: Encourage your child to find evidence in the text before answering. Ask "Which sentence told you that?"</div>
+
+      <div class="activity-tabs">
+        <button class="tab-btn active" data-panel="panel-stories">Story Quiz</button>
+      </div>
+
+      <div id="panel-stories" class="activity-panel active">
+        <div id="reading-quiz"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="index.html">← Back to Adventure Map</a></p>
+  </footer>
+
+  <script src="assets/js/progress.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

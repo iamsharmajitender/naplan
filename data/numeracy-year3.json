@@ -1,0 +1,99 @@
+[
+  {
+    "id": "n1",
+    "question": "What is 47 + 35?",
+    "choices": [
+      { "text": "72", "correct": false },
+      { "text": "82", "correct": true },
+      { "text": "81", "correct": false },
+      { "text": "92", "correct": false }
+    ],
+    "explanation": "47 + 35 = 82.",
+    "hint": "Add the ones first: 7 + 5 = 12. Carry the 1."
+  },
+  {
+    "id": "n2",
+    "question": "What is 63 − 28?",
+    "choices": [
+      { "text": "35", "correct": true },
+      { "text": "45", "correct": false },
+      { "text": "37", "correct": false },
+      { "text": "41", "correct": false }
+    ],
+    "explanation": "63 − 28 = 35.",
+    "hint": "Try counting up from 28 to 63, or borrow from the tens."
+  },
+  {
+    "id": "n3",
+    "question": "A sandwich costs $4 and a drink costs $2.50. How much altogether?",
+    "image": "🥪🧃",
+    "choices": [
+      { "text": "$5.50", "correct": false },
+      { "text": "$6.00", "correct": false },
+      { "text": "$6.50", "correct": true },
+      { "text": "$7.00", "correct": false }
+    ],
+    "explanation": "$4.00 + $2.50 = $6.50.",
+    "hint": "Add the dollars first, then the cents."
+  },
+  {
+    "id": "n4",
+    "question": "How many minutes are in half an hour?",
+    "choices": [
+      { "text": "15 minutes", "correct": false },
+      { "text": "30 minutes", "correct": true },
+      { "text": "45 minutes", "correct": false },
+      { "text": "60 minutes", "correct": false }
+    ],
+    "explanation": "Half of 60 minutes is 30 minutes.",
+    "hint": "An hour has 60 minutes. What is half of 60?"
+  },
+  {
+    "id": "n5",
+    "question": "Which fraction shows one quarter shaded?",
+    "choices": [
+      { "text": "1/2", "correct": false },
+      { "text": "1/3", "correct": false },
+      { "text": "1/4", "correct": true },
+      { "text": "2/4", "correct": false }
+    ],
+    "explanation": "One quarter means 1 out of 4 equal parts.",
+    "hint": "Quarter means 4 equal pieces."
+  },
+  {
+    "id": "n6",
+    "question": "What is 5 × 4?",
+    "choices": [
+      { "text": "9", "correct": false },
+      { "text": "15", "correct": false },
+      { "text": "20", "correct": true },
+      { "text": "25", "correct": false }
+    ],
+    "explanation": "5 groups of 4 equals 20.",
+    "hint": "Count in fours: 4, 8, 12, 16, 20."
+  },
+  {
+    "id": "n7",
+    "question": "A rectangle has a length of 6 cm and width of 3 cm. What is the perimeter?",
+    "choices": [
+      { "text": "9 cm", "correct": false },
+      { "text": "12 cm", "correct": false },
+      { "text": "18 cm", "correct": true },
+      { "text": "36 cm", "correct": false }
+    ],
+    "explanation": "Perimeter = 6 + 3 + 6 + 3 = 18 cm.",
+    "hint": "Add all four sides of the rectangle."
+  },
+  {
+    "id": "n8",
+    "question": "Which number comes next in the pattern? 5, 10, 15, 20, ___",
+    "choices": [
+      { "text": "22", "correct": false },
+      { "text": "24", "correct": false },
+      { "text": "25", "correct": true },
+      { "text": "30", "correct": false }
+    ],
+    "explanation": "The pattern adds 5 each time. 20 + 5 = 25.",
+    "hint": "Look at the gap between each number."
+  }
+]

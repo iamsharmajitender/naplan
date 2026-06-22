@@ -1,0 +1,74 @@
+[
+  {
+    "id": "g1",
+    "question": "Choose the correct word: \"___ went to the park with her dog.\"",
+    "choices": [
+      { "text": "She", "correct": true },
+      { "text": "Her", "correct": false },
+      { "text": "Hers", "correct": false },
+      { "text": "They", "correct": false }
+    ],
+    "explanation": "\"She\" is the subject — the person doing the action.",
+    "hint": "You need a word for a girl doing something."
+  },
+  {
+    "id": "g2",
+    "question": "Choose the correct word: \"The boys ___ playing footy after school.\"",
+    "choices": [
+      { "text": "was", "correct": false },
+      { "text": "is", "correct": false },
+      { "text": "were", "correct": true },
+      { "text": "am", "correct": false }
+    ],
+    "explanation": "\"Boys\" is plural, so we use \"were\".",
+    "hint": "More than one boy — is it was or were?"
+  },
+  {
+    "id": "g3",
+    "question": "Which sentence is correct?",
+    "choices": [
+      { "text": "me and Tom went shopping", "correct": false },
+      { "text": "Tom and I went shopping", "correct": true },
+      { "text": "Tom and me went shopping", "correct": false },
+      { "text": "I and Tom went shopping", "correct": false }
+    ],
+    "explanation": "Say \"Tom and I went shopping\" — I is used as the subject.",
+    "hint": "Try saying the sentence with just one person: \"___ went shopping.\""
+  },
+  {
+    "id": "g4",
+    "question": "Choose the correct word: \"I left my hat over ___.\"",
+    "choices": [
+      { "text": "there", "correct": true },
+      { "text": "their", "correct": false },
+      { "text": "they're", "correct": false },
+      { "text": "they are", "correct": false }
+    ],
+    "explanation": "\"There\" means a place. \"Their\" means belonging to them. \"They're\" means they are.",
+    "hint": "Which word means a place or position?"
+  },
+  {
+    "id": "g5",
+    "question": "Which sentence has correct punctuation?",
+    "choices": [
+      { "text": "what time is it.", "correct": false },
+      { "text": "What time is it?", "correct": true },
+      { "text": "what time is it!", "correct": false },
+      { "text": "What time is it", "correct": false }
+    ],
+    "explanation": "Questions need a capital letter and a question mark.",
+    "hint": "This is a question — what mark goes at the end?"
+  },
+  {
+    "id": "g6",
+    "question": "Add the missing comma: \"After school I rode my bike home.\"",
+    "choices": [
+      { "text": "After, school I rode my bike home.", "correct": false },
+      { "text": "After school, I rode my bike home.", "correct": true },
+      { "text": "After school I, rode my bike home.", "correct": false },
+      { "text": "No comma needed", "correct": false }
+    ],
+    "explanation": "Use a comma after an opening phrase like \"After school,\".",
+    "hint": "Put a comma where you would pause when reading aloud."
+  }
+]

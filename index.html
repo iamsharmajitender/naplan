@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fun NAPLAN Year 3 practice for Melbourne kids — Reading, Writing, Language & Numeracy adventures!">
+  <meta name="base-path" content="">
+  <title>NAPLAN Adventure — Year 3 Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🐨</span>
+        <span class="logo-text">NAPLAN Adventure</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reading.html">Reading</a></li>
+          <li><a href="writing.html">Writing</a></li>
+          <li><a href="language.html">Language</a></li>
+          <li><a href="numeracy.html">Numeracy</a></li>
+          <li><a href="progress.html">Progress</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:1rem">
+        <label class="parent-toggle">
+          <input type="checkbox" id="parent-mode"> Parent tips
+        </label>
+        <div class="stars-badge">⭐ <span id="total-stars">0</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-mascot">🐨</div>
+      <h1>Welcome to NAPLAN Adventure!</h1>
+      <p>Hi! I'm Koala Quest. Let's explore four magical worlds and get ready for Year 3 NAPLAN in a fun way!</p>
+      <p class="hero-sub">🇦🇺 Made for Melbourne kids · Year 3 · NAPLAN 2027</p>
+    </section>
+
+    <div class="container">
+      <div class="parent-tip">💡 Parent tip: Short daily sessions (15–20 minutes) work better than long cramming. Celebrate effort, not just correct answers!</div>
+
+      <div class="worlds-grid">
+        <a href="reading.html" class="world-card reading">
+          <span class="world-icon">📚</span>
+          <h3>Reading Reef</h3>
+          <p>Read Melbourne stories and answer questions</p>
+          <span class="world-progress" data-progress="reading">0 ⭐</span>
+        </a>
+        <a href="writing.html" class="world-card writing">
+          <span class="world-icon">✏️</span>
+          <h3>Writing Workshop</h3>
+          <p>Story prompts, planners & 40-min timer</p>
+          <span class="world-progress" data-progress="writing">0 prompts</span>
+        </a>
+        <a href="language.html" class="world-card language">
+          <span class="world-icon">🌊</span>
+          <h3>Language Lagoon</h3>
+          <p>Spelling, grammar & punctuation games</p>
+          <span class="world-progress" data-progress="language">0 ⭐</span>
+        </a>
+        <a href="numeracy.html" class="world-card numeracy">
+          <span class="world-icon">🔢</span>
+          <h3>Number Neighbourhood</h3>
+          <p>Shop maths, shapes, graphs & more</p>
+          <span class="world-progress" data-progress="numeracy">0 ⭐</span>
+        </a>
+      </div>
+
+      <section style="margin-top:2.5rem;text-align:center">
+        <h2>What is NAPLAN?</h2>
+        <p style="max-width:650px;margin:0.75rem auto 1.5rem;color:var(--ink-light)">
+          NAPLAN tests reading, writing, spelling & grammar, and numeracy. In Year 3, writing is on paper (40 min) and the other tests are online (~45 min each). This site helps you practise — it's not the real test, just friendly practice!
+        </p>
+        <a href="progress.html" class="btn btn-primary">View My Progress →</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>NAPLAN Adventure · Practice site for educational purposes · Not affiliated with ACARA or VCAA</p>
+    <p><a href="https://www.nap.edu.au/" target="_blank" rel="noopener">Official NAPLAN info</a></p>
+  </footer>
+
+  <script src="assets/js/progress.js"></script>
+</body>
+</html>

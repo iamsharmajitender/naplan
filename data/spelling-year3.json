@@ -1,0 +1,14 @@
+[
+  { "word": "because", "hint": "A word that explains why something happened", "sentence": "I wore a jacket ___ it was cold." },
+  { "word": "beautiful", "hint": "A word meaning very pretty", "sentence": "The sunset over Port Phillip Bay was ___." },
+  { "word": "friend", "hint": "Someone you like spending time with", "sentence": "My best ___ came to my birthday party." },
+  { "word": "together", "hint": "When people do something as a group", "sentence": "We worked ___ to build the sandcastle." },
+  { "word": "different", "hint": "Not the same as something else", "sentence": "Each tram route is ___ from the others." },
+  { "word": "important", "hint": "Something that matters a lot", "sentence": "It is ___ to look both ways before crossing." },
+  { "word": "enough", "hint": "As much as you need", "sentence": "Do we have ___ milk for breakfast?" },
+  { "word": "people", "hint": "More than one person", "sentence": "Many ___ visit the MCG each year." },
+  { "word": "thought", "hint": "Past tense of think", "sentence": "I ___ the movie was really exciting." },
+  { "word": "through", "hint": "Going from one side to the other", "sentence": "We walked ___ the Royal Botanic Gardens." },
+  { "word": "answer", "hint": "What you say when someone asks a question", "sentence": "Please write your ___ on the line." },
+  { "word": "question", "hint": "Something you ask to find out information", "sentence": "Raise your hand if you have a ___." }
+]

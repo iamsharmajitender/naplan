@@ -1,0 +1,114 @@
+[
+  {
+    "id": "r1",
+    "title": "A Day at St Kilda Beach",
+    "passage": "Emma and her dad walked along the St Kilda pier on a sunny Saturday morning. The seagulls squawked loudly above them, hoping for a chip or two.\nIt was Emma's first time on the pier, and she felt a little nervous looking at the water below. Her dad held her hand and pointed to the little penguins hiding under the boardwalk.\n\"They're so tiny!\" Emma whispered. She forgot about being nervous and smiled widely. They bought ice cream from a van near the beach and sat on the sand, watching the waves roll in.",
+    "question": "Why did Emma feel nervous at the start of the story?",
+    "choices": [
+      { "text": "She lost her hat in the wind", "correct": false },
+      { "text": "It was her first time on the pier", "correct": true },
+      { "text": "It started to rain heavily", "correct": false },
+      { "text": "She did not like ice cream", "correct": false }
+    ],
+    "explanation": "The story says it was Emma's first time on the pier.",
+    "hint": "Look in the second paragraph for how Emma felt."
+  },
+  {
+    "id": "r2",
+    "title": "A Day at St Kilda Beach",
+    "passage": "Emma and her dad walked along the St Kilda pier on a sunny Saturday morning. The seagulls squawked loudly above them, hoping for a chip or two.\nIt was Emma's first time on the pier, and she felt a little nervous looking at the water below. Her dad held her hand and pointed to the little penguins hiding under the boardwalk.\n\"They're so tiny!\" Emma whispered. She forgot about being nervous and smiled widely. They bought ice cream from a van near the beach and sat on the sand, watching the waves roll in.",
+    "question": "What helped Emma stop feeling nervous?",
+    "choices": [
+      { "text": "Her dad bought her a new hat", "correct": false },
+      { "text": "She saw the little penguins under the boardwalk", "correct": true },
+      { "text": "The seagulls flew away", "correct": false },
+      { "text": "They went home early", "correct": false }
+    ],
+    "explanation": "Seeing the penguins made Emma smile and forget her nerves.",
+    "hint": "What did her dad point out to her?"
+  },
+  {
+    "id": "r3",
+    "title": "Trams of Melbourne",
+    "passage": "Melbourne is famous for its trams. These big vehicles travel along tracks in the middle of the road. The number 96 tram goes from St Kilda Beach all the way to East Brunswick.\nInside the tram, passengers can hold onto poles or sit on green seats. A bell rings when the tram is about to stop. Drivers must be careful because cars and bikes share the road with trams.\nMany tourists ride the free City Circle tram to see famous buildings like Flinders Street Station and Federation Square.",
+    "question": "What is the main topic of this text?",
+    "choices": [
+      { "text": "How to drive a car in Melbourne", "correct": false },
+      { "text": "Melbourne's trams and how they work", "correct": true },
+      { "text": "The history of Federation Square", "correct": false },
+      { "text": "Why seagulls live near the beach", "correct": false }
+    ],
+    "explanation": "The whole text is about Melbourne's trams.",
+    "hint": "What does every paragraph talk about?"
+  },
+  {
+    "id": "r4",
+    "title": "Trams of Melbourne",
+    "passage": "Melbourne is famous for its trams. These big vehicles travel along tracks in the middle of the road. The number 96 tram goes from St Kilda Beach all the way to East Brunswick.\nInside the tram, passengers can hold onto poles or sit on green seats. A bell rings when the tram is about to stop. Drivers must be careful because cars and bikes share the road with trams.\nMany tourists ride the free City Circle tram to see famous buildings like Flinders Street Station and Federation Square.",
+    "question": "Which tram is free for tourists?",
+    "choices": [
+      { "text": "Number 96 tram", "correct": false },
+      { "text": "City Circle tram", "correct": true },
+      { "text": "East Brunswick tram", "correct": false },
+      { "text": "St Kilda Beach tram", "correct": false }
+    ],
+    "explanation": "The last paragraph mentions the free City Circle tram.",
+    "hint": "Read the last paragraph carefully."
+  },
+  {
+    "id": "r5",
+    "title": "The Wombat in the Garden",
+    "passage": "Last Tuesday, Mrs Chen found a wombat digging near her vegetable garden in Fitzroy. The wombat had round ears, sharp claws, and a grumpy face.\nMrs Chen called a wildlife rescue group. A kind volunteer named Jake arrived with a big cage and some fresh carrots. He explained that wombats sometimes wander into suburbs looking for food.\nTogether, they gently guided the wombat into the cage. Jake took it to a safe bushland area far from the busy streets. Mrs Chen waved goodbye and hoped the wombat would find a cosy burrow.",
+    "question": "Who helped Mrs Chen with the wombat?",
+    "choices": [
+      { "text": "Her neighbour Tom", "correct": false },
+      { "text": "A wildlife volunteer named Jake", "correct": true },
+      { "text": "A police officer", "correct": false },
+      { "text": "Her daughter Emma", "correct": false }
+    ],
+    "explanation": "Jake from the wildlife rescue group came to help.",
+    "hint": "Look for the person who arrived with a cage."
+  },
+  {
+    "id": "r6",
+    "title": "Should Schools Have Gardens?",
+    "passage": "Every school should have a vegetable garden. Gardens teach students where food comes from and how plants grow. Children learn patience as they wait for seeds to sprout.\nSchool gardens also help the environment. Plants clean the air and attract helpful insects like bees. Students can even eat the vegetables they grow, which is healthy and fun.\nSome people say gardens take too much time, but even a small garden can make a big difference. With just thirty minutes a week, a class can care for tomatoes, lettuce, and herbs.",
+    "question": "What is the writer trying to do in this text?",
+    "choices": [
+      { "text": "Tell a funny story about bees", "correct": false },
+      { "text": "Persuade readers that schools should have gardens", "correct": true },
+      { "text": "Explain how to cook tomatoes", "correct": false },
+      { "text": "Describe a trip to the supermarket", "correct": false }
+    ],
+    "explanation": "The writer gives reasons why every school should have a garden.",
+    "hint": "Look at the first sentence — what does the writer believe?"
+  },
+  {
+    "id": "r7",
+    "title": "The MCG",
+    "passage": "The Melbourne Cricket Ground, or MCG, is one of the largest stadiums in the world. It can hold over 100,000 people. On big game days, the stands are packed with cheering fans wearing team colours.\nThe MCG is not just for cricket. Australian Rules Football matches are played there too. Families bring picnics and wave scarves when their team scores a goal.\nThe stadium also has a sports museum where visitors can learn about famous athletes and see old trophies. Many Melbourne families visit the MCG at least once a year.",
+    "question": "Which sports are mentioned in the text?",
+    "choices": [
+      { "text": "Swimming and tennis", "correct": false },
+      { "text": "Cricket and Australian Rules Football", "correct": true },
+      { "text": "Soccer and basketball", "correct": false },
+      { "text": "Rugby and hockey", "correct": false }
+    ],
+    "explanation": "The text mentions cricket and Australian Rules Football.",
+    "hint": "Check the second paragraph."
+  },
+  {
+    "id": "r8",
+    "title": "Rainy Day Inside",
+    "passage": "Liam stared out the window at the grey Melbourne sky. Rain tapped on the roof like a drum. \"I'm bored,\" he sighed.\nHis mum smiled and pulled out a board game from the cupboard. \"Let's have a tournament,\" she said. They played three games of Scrabble, and Liam learned two new words: \"quartz\" and \"jovial.\"\nBy afternoon, the sun peeked through the clouds. Liam and his mum put on gumboots and jumped in puddles on the footpath. It turned out to be the best rainy day ever.",
+    "question": "How did Liam's feelings change during the story?",
+    "choices": [
+      { "text": "He was happy, then sad, then angry", "correct": false },
+      { "text": "He was bored, then had fun, and ended up happy", "correct": true },
+      { "text": "He was scared of the rain the whole time", "correct": false },
+      { "text": "He stayed bored from start to finish", "correct": false }
+    ],
+    "explanation": "Liam started bored, enjoyed games with his mum, and had the best rainy day.",
+    "hint": "Compare how Liam felt at the start and the end."
+  }
+]
