@@ -22,11 +22,16 @@
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="reading.html">Reading</a></li>
+          <li class="nav-dropdown">
+            <button type="button" class="nav-dropdown-btn" id="nav-subjects-btn" aria-haspopup="true" aria-expanded="false">Subjects</button>
+            <ul class="nav-dropdown-menu" id="nav-subjects-menu">
+              <li><a href="reading.html">Reading</a></li>
+              <li><a href="writing.html">Writing</a></li>
+              <li><a href="language.html">Language</a></li>
+              <li><a href="numeracy.html">Numeracy</a></li>
+            </ul>
+          </li>
           <li><a href="stories.html">Stories</a></li>
-          <li><a href="writing.html">Writing</a></li>
-          <li><a href="language.html">Language</a></li>
-          <li><a href="numeracy.html">Numeracy</a></li>
           <li><a href="games.html">Games</a></li>
           <li><a href="progress.html">Progress</a></li>
         </ul>
@@ -41,14 +46,14 @@
   </header>
 
   <main>
-    <section class="page-hero">
+    <section class="page-hero" id="stories-hero">
       <div class="page-icon">📖</div>
       <h1>Story Library</h1>
       <p>20 fun short stories to read just for the joy of it. Pick a cover and start reading!</p>
     </section>
 
-    <div class="container">
-      <div class="parent-tip">💡 Parent tip: Reading for fun builds vocabulary and confidence. Try reading together — take turns reading a paragraph each, and chat about the "I wonder..." questions at the end.</div>
+    <div class="container" id="stories-container">
+      <div class="parent-tip" id="stories-parent-tip">💡 Parent tip: Reading for fun builds vocabulary and confidence. Try reading together — take turns reading a paragraph each, and chat about the "I wonder..." questions at the end.</div>
 
       <div class="story-filters" id="story-filters">
         <button class="story-filter active" data-level="all">All Stories</button>
@@ -56,8 +61,10 @@
         <button class="story-filter" data-level="Year 3">Year 3</button>
       </div>
 
-      <div id="story-library" class="story-grid"></div>
+      <div class="story-picker" id="story-picker" aria-label="Jump to a story"></div>
+
       <div id="story-reader" class="story-reader hidden"></div>
+      <div id="story-library" class="story-grid"></div>
     </div>
   </main>
 
