@@ -42,15 +42,23 @@
     <section class="page-hero">
       <div class="page-icon">🎮</div>
       <h1>Game Zone</h1>
-      <p>Take a fun break! Play Tic Tac Toe or race up Snakes & Ladders.</p>
+      <p>Take a fun break! Play board games, matching games and more.</p>
     </section>
 
     <div class="container">
-      <div class="parent-tip">💡 Parent tip: A short game break between NAPLAN practice keeps learning fun. Snakes & Ladders is great for counting and patience!</div>
+      <div class="parent-tip">💡 Parent tip: A short game break between practice keeps learning fun. The Year 2 games (Memory Match, Simon Says, Counting Fun) are great for younger players and build memory and counting skills.</div>
 
+      <h2 style="text-align:center;margin:0.5rem 0 0.25rem">All Ages</h2>
       <div class="activity-tabs">
         <button class="tab-btn games-tab-btn active" data-panel="panel-ttt">Tic Tac Toe</button>
         <button class="tab-btn games-tab-btn" data-panel="panel-snl">Snakes & Ladders</button>
+      </div>
+
+      <h2 style="text-align:center;margin:1.25rem 0 0.25rem">🧸 Year 2 Games</h2>
+      <div class="activity-tabs">
+        <button class="tab-btn games-tab-btn" data-panel="panel-memory">Memory Match</button>
+        <button class="tab-btn games-tab-btn" data-panel="panel-simon">Simon Says</button>
+        <button class="tab-btn games-tab-btn" data-panel="panel-counting">Counting Fun</button>
       </div>
 
       <div id="panel-ttt" class="activity-panel active">
@@ -58,6 +66,15 @@
       </div>
       <div id="panel-snl" class="activity-panel">
         <div id="snl-game"></div>
+      </div>
+      <div id="panel-memory" class="activity-panel">
+        <div id="memory-game"></div>
+      </div>
+      <div id="panel-simon" class="activity-panel">
+        <div id="simon-game"></div>
+      </div>
+      <div id="panel-counting" class="activity-panel">
+        <div id="counting-game"></div>
       </div>
     </div>
   </main>

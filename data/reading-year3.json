@@ -29,6 +29,20 @@
   },
   {
     "id": "r3",
+    "title": "A Day at St Kilda Beach",
+    "passage": "Emma and her dad walked along the St Kilda pier on a sunny Saturday morning. The seagulls squawked loudly above them, hoping for a chip or two.\nIt was Emma's first time on the pier, and she felt a little nervous looking at the water below. Her dad held her hand and pointed to the little penguins hiding under the boardwalk.\n\"They're so tiny!\" Emma whispered. She forgot about being nervous and smiled widely. They bought ice cream from a van near the beach and sat on the sand, watching the waves roll in.",
+    "question": "What were the seagulls hoping to get?",
+    "choices": [
+      { "text": "A chip or two", "correct": true },
+      { "text": "Some ice cream", "correct": false },
+      { "text": "A ride on the pier", "correct": false },
+      { "text": "A penguin", "correct": false }
+    ],
+    "explanation": "The first paragraph says the seagulls were hoping for a chip or two.",
+    "hint": "Read the first paragraph about the seagulls."
+  },
+  {
+    "id": "r4",
     "title": "Trams of Melbourne",
     "passage": "Melbourne is famous for its trams. These big vehicles travel along tracks in the middle of the road. The number 96 tram goes from St Kilda Beach all the way to East Brunswick.\nInside the tram, passengers can hold onto poles or sit on green seats. A bell rings when the tram is about to stop. Drivers must be careful because cars and bikes share the road with trams.\nMany tourists ride the free City Circle tram to see famous buildings like Flinders Street Station and Federation Square.",
     "question": "What is the main topic of this text?",
@@ -42,7 +56,7 @@
     "hint": "What does every paragraph talk about?"
   },
   {
-    "id": "r4",
+    "id": "r5",
     "title": "Trams of Melbourne",
     "passage": "Melbourne is famous for its trams. These big vehicles travel along tracks in the middle of the road. The number 96 tram goes from St Kilda Beach all the way to East Brunswick.\nInside the tram, passengers can hold onto poles or sit on green seats. A bell rings when the tram is about to stop. Drivers must be careful because cars and bikes share the road with trams.\nMany tourists ride the free City Circle tram to see famous buildings like Flinders Street Station and Federation Square.",
     "question": "Which tram is free for tourists?",
@@ -56,7 +70,21 @@
     "hint": "Read the last paragraph carefully."
   },
   {
-    "id": "r5",
+    "id": "r6",
+    "title": "Trams of Melbourne",
+    "passage": "Melbourne is famous for its trams. These big vehicles travel along tracks in the middle of the road. The number 96 tram goes from St Kilda Beach all the way to East Brunswick.\nInside the tram, passengers can hold onto poles or sit on green seats. A bell rings when the tram is about to stop. Drivers must be careful because cars and bikes share the road with trams.\nMany tourists ride the free City Circle tram to see famous buildings like Flinders Street Station and Federation Square.",
+    "question": "What happens when the tram is about to stop?",
+    "choices": [
+      { "text": "The lights turn off", "correct": false },
+      { "text": "A bell rings", "correct": true },
+      { "text": "The doors lock", "correct": false },
+      { "text": "The driver honks a horn", "correct": false }
+    ],
+    "explanation": "The second paragraph says a bell rings when the tram is about to stop.",
+    "hint": "Look in the paragraph about the inside of the tram."
+  },
+  {
+    "id": "r7",
     "title": "The Wombat in the Garden",
     "passage": "Last Tuesday, Mrs Chen found a wombat digging near her vegetable garden in Fitzroy. The wombat had round ears, sharp claws, and a grumpy face.\nMrs Chen called a wildlife rescue group. A kind volunteer named Jake arrived with a big cage and some fresh carrots. He explained that wombats sometimes wander into suburbs looking for food.\nTogether, they gently guided the wombat into the cage. Jake took it to a safe bushland area far from the busy streets. Mrs Chen waved goodbye and hoped the wombat would find a cosy burrow.",
     "question": "Who helped Mrs Chen with the wombat?",
@@ -70,7 +98,35 @@
     "hint": "Look for the person who arrived with a cage."
   },
   {
-    "id": "r6",
+    "id": "r8",
+    "title": "The Wombat in the Garden",
+    "passage": "Last Tuesday, Mrs Chen found a wombat digging near her vegetable garden in Fitzroy. The wombat had round ears, sharp claws, and a grumpy face.\nMrs Chen called a wildlife rescue group. A kind volunteer named Jake arrived with a big cage and some fresh carrots. He explained that wombats sometimes wander into suburbs looking for food.\nTogether, they gently guided the wombat into the cage. Jake took it to a safe bushland area far from the busy streets. Mrs Chen waved goodbye and hoped the wombat would find a cosy burrow.",
+    "question": "Why do wombats sometimes wander into suburbs?",
+    "choices": [
+      { "text": "To play with people", "correct": false },
+      { "text": "Looking for food", "correct": true },
+      { "text": "To ride on trams", "correct": false },
+      { "text": "Because they are lost on purpose", "correct": false }
+    ],
+    "explanation": "Jake explained that wombats sometimes wander into suburbs looking for food.",
+    "hint": "Jake gives the reason in the second paragraph."
+  },
+  {
+    "id": "r9",
+    "title": "The Wombat in the Garden",
+    "passage": "Last Tuesday, Mrs Chen found a wombat digging near her vegetable garden in Fitzroy. The wombat had round ears, sharp claws, and a grumpy face.\nMrs Chen called a wildlife rescue group. A kind volunteer named Jake arrived with a big cage and some fresh carrots. He explained that wombats sometimes wander into suburbs looking for food.\nTogether, they gently guided the wombat into the cage. Jake took it to a safe bushland area far from the busy streets. Mrs Chen waved goodbye and hoped the wombat would find a cosy burrow.",
+    "question": "Where did Jake take the wombat?",
+    "choices": [
+      { "text": "To the zoo", "correct": false },
+      { "text": "To a safe bushland area", "correct": true },
+      { "text": "Back to the garden", "correct": false },
+      { "text": "To the city", "correct": false }
+    ],
+    "explanation": "Jake took the wombat to a safe bushland area far from the busy streets.",
+    "hint": "Read the last paragraph."
+  },
+  {
+    "id": "r10",
     "title": "Should Schools Have Gardens?",
     "passage": "Every school should have a vegetable garden. Gardens teach students where food comes from and how plants grow. Children learn patience as they wait for seeds to sprout.\nSchool gardens also help the environment. Plants clean the air and attract helpful insects like bees. Students can even eat the vegetables they grow, which is healthy and fun.\nSome people say gardens take too much time, but even a small garden can make a big difference. With just thirty minutes a week, a class can care for tomatoes, lettuce, and herbs.",
     "question": "What is the writer trying to do in this text?",
@@ -84,7 +140,35 @@
     "hint": "Look at the first sentence — what does the writer believe?"
   },
   {
-    "id": "r7",
+    "id": "r11",
+    "title": "Should Schools Have Gardens?",
+    "passage": "Every school should have a vegetable garden. Gardens teach students where food comes from and how plants grow. Children learn patience as they wait for seeds to sprout.\nSchool gardens also help the environment. Plants clean the air and attract helpful insects like bees. Students can even eat the vegetables they grow, which is healthy and fun.\nSome people say gardens take too much time, but even a small garden can make a big difference. With just thirty minutes a week, a class can care for tomatoes, lettuce, and herbs.",
+    "question": "According to the text, how do gardens help the environment?",
+    "choices": [
+      { "text": "They make noise", "correct": false },
+      { "text": "Plants clean the air and attract bees", "correct": true },
+      { "text": "They use lots of water", "correct": false },
+      { "text": "They scare away animals", "correct": false }
+    ],
+    "explanation": "The text says plants clean the air and attract helpful insects like bees.",
+    "hint": "Read the second paragraph about the environment."
+  },
+  {
+    "id": "r12",
+    "title": "Should Schools Have Gardens?",
+    "passage": "Every school should have a vegetable garden. Gardens teach students where food comes from and how plants grow. Children learn patience as they wait for seeds to sprout.\nSchool gardens also help the environment. Plants clean the air and attract helpful insects like bees. Students can even eat the vegetables they grow, which is healthy and fun.\nSome people say gardens take too much time, but even a small garden can make a big difference. With just thirty minutes a week, a class can care for tomatoes, lettuce, and herbs.",
+    "question": "How much time does the writer say a class needs each week?",
+    "choices": [
+      { "text": "Thirty minutes", "correct": true },
+      { "text": "Two hours", "correct": false },
+      { "text": "A whole day", "correct": false },
+      { "text": "Ten minutes", "correct": false }
+    ],
+    "explanation": "The last paragraph says just thirty minutes a week.",
+    "hint": "Check the last sentence for a number."
+  },
+  {
+    "id": "r13",
     "title": "The MCG",
     "passage": "The Melbourne Cricket Ground, or MCG, is one of the largest stadiums in the world. It can hold over 100,000 people. On big game days, the stands are packed with cheering fans wearing team colours.\nThe MCG is not just for cricket. Australian Rules Football matches are played there too. Families bring picnics and wave scarves when their team scores a goal.\nThe stadium also has a sports museum where visitors can learn about famous athletes and see old trophies. Many Melbourne families visit the MCG at least once a year.",
     "question": "Which sports are mentioned in the text?",
@@ -98,7 +182,35 @@
     "hint": "Check the second paragraph."
   },
   {
-    "id": "r8",
+    "id": "r14",
+    "title": "The MCG",
+    "passage": "The Melbourne Cricket Ground, or MCG, is one of the largest stadiums in the world. It can hold over 100,000 people. On big game days, the stands are packed with cheering fans wearing team colours.\nThe MCG is not just for cricket. Australian Rules Football matches are played there too. Families bring picnics and wave scarves when their team scores a goal.\nThe stadium also has a sports museum where visitors can learn about famous athletes and see old trophies. Many Melbourne families visit the MCG at least once a year.",
+    "question": "About how many people can the MCG hold?",
+    "choices": [
+      { "text": "Over 1,000", "correct": false },
+      { "text": "Over 10,000", "correct": false },
+      { "text": "Over 100,000", "correct": true },
+      { "text": "Over 1,000,000", "correct": false }
+    ],
+    "explanation": "The first paragraph says it can hold over 100,000 people.",
+    "hint": "Look for the big number in the first paragraph."
+  },
+  {
+    "id": "r15",
+    "title": "The MCG",
+    "passage": "The Melbourne Cricket Ground, or MCG, is one of the largest stadiums in the world. It can hold over 100,000 people. On big game days, the stands are packed with cheering fans wearing team colours.\nThe MCG is not just for cricket. Australian Rules Football matches are played there too. Families bring picnics and wave scarves when their team scores a goal.\nThe stadium also has a sports museum where visitors can learn about famous athletes and see old trophies. Many Melbourne families visit the MCG at least once a year.",
+    "question": "What can visitors do at the sports museum?",
+    "choices": [
+      { "text": "Play cricket", "correct": false },
+      { "text": "Learn about famous athletes and see old trophies", "correct": true },
+      { "text": "Buy ice cream", "correct": false },
+      { "text": "Ride a tram", "correct": false }
+    ],
+    "explanation": "The last paragraph says the museum lets visitors learn about athletes and see trophies.",
+    "hint": "Read the part about the museum."
+  },
+  {
+    "id": "r16",
     "title": "Rainy Day Inside",
     "passage": "Liam stared out the window at the grey Melbourne sky. Rain tapped on the roof like a drum. \"I'm bored,\" he sighed.\nHis mum smiled and pulled out a board game from the cupboard. \"Let's have a tournament,\" she said. They played three games of Scrabble, and Liam learned two new words: \"quartz\" and \"jovial.\"\nBy afternoon, the sun peeked through the clouds. Liam and his mum put on gumboots and jumped in puddles on the footpath. It turned out to be the best rainy day ever.",
     "question": "How did Liam's feelings change during the story?",
@@ -110,5 +222,719 @@
     ],
     "explanation": "Liam started bored, enjoyed games with his mum, and had the best rainy day.",
     "hint": "Compare how Liam felt at the start and the end."
+  },
+  {
+    "id": "r17",
+    "title": "Rainy Day Inside",
+    "passage": "Liam stared out the window at the grey Melbourne sky. Rain tapped on the roof like a drum. \"I'm bored,\" he sighed.\nHis mum smiled and pulled out a board game from the cupboard. \"Let's have a tournament,\" she said. They played three games of Scrabble, and Liam learned two new words: \"quartz\" and \"jovial.\"\nBy afternoon, the sun peeked through the clouds. Liam and his mum put on gumboots and jumped in puddles on the footpath. It turned out to be the best rainy day ever.",
+    "question": "What game did Liam and his mum play?",
+    "choices": [
+      { "text": "Chess", "correct": false },
+      { "text": "Scrabble", "correct": true },
+      { "text": "Snakes and Ladders", "correct": false },
+      { "text": "Cards", "correct": false }
+    ],
+    "explanation": "They played three games of Scrabble.",
+    "hint": "Look in the second paragraph."
+  },
+  {
+    "id": "r18",
+    "title": "Rainy Day Inside",
+    "passage": "Liam stared out the window at the grey Melbourne sky. Rain tapped on the roof like a drum. \"I'm bored,\" he sighed.\nHis mum smiled and pulled out a board game from the cupboard. \"Let's have a tournament,\" she said. They played three games of Scrabble, and Liam learned two new words: \"quartz\" and \"jovial.\"\nBy afternoon, the sun peeked through the clouds. Liam and his mum put on gumboots and jumped in puddles on the footpath. It turned out to be the best rainy day ever.",
+    "question": "The rain 'tapped on the roof like a drum'. What does this tell us?",
+    "choices": [
+      { "text": "The rain made a tapping sound", "correct": true },
+      { "text": "Someone was playing a real drum", "correct": false },
+      { "text": "The roof was broken", "correct": false },
+      { "text": "It was snowing", "correct": false }
+    ],
+    "explanation": "Comparing the rain to a drum shows it made a tapping sound.",
+    "hint": "It is describing the sound of the rain."
+  },
+  {
+    "id": "r19",
+    "title": "The Penguin Parade",
+    "passage": "At Phillip Island, just outside Melbourne, something amazing happens every evening. As the sun sets, tiny little penguins waddle out of the sea and cross the sand to their burrows.\nThese are the smallest penguins in the world. They spend their days swimming and catching fish. At night, they return home to rest and feed their chicks.\nVisitors sit quietly and watch the penguins parade up the beach. People must not take photos, because the bright flashes can hurt the penguins' eyes.",
+    "question": "When do the little penguins come out of the sea?",
+    "choices": [
+      { "text": "At sunrise", "correct": false },
+      { "text": "At lunchtime", "correct": false },
+      { "text": "As the sun sets", "correct": true },
+      { "text": "At midnight", "correct": false }
+    ],
+    "explanation": "The text says as the sun sets, the penguins waddle out of the sea.",
+    "hint": "Read the first paragraph about the evening."
+  },
+  {
+    "id": "r20",
+    "title": "The Penguin Parade",
+    "passage": "At Phillip Island, just outside Melbourne, something amazing happens every evening. As the sun sets, tiny little penguins waddle out of the sea and cross the sand to their burrows.\nThese are the smallest penguins in the world. They spend their days swimming and catching fish. At night, they return home to rest and feed their chicks.\nVisitors sit quietly and watch the penguins parade up the beach. People must not take photos, because the bright flashes can hurt the penguins' eyes.",
+    "question": "Why must visitors not take photos?",
+    "choices": [
+      { "text": "It is too dark", "correct": false },
+      { "text": "The flashes can hurt the penguins' eyes", "correct": true },
+      { "text": "Cameras are not allowed on the island", "correct": false },
+      { "text": "The penguins are too fast", "correct": false }
+    ],
+    "explanation": "The last paragraph says bright flashes can hurt the penguins' eyes.",
+    "hint": "Look at the last sentence."
+  },
+  {
+    "id": "r21",
+    "title": "The Penguin Parade",
+    "passage": "At Phillip Island, just outside Melbourne, something amazing happens every evening. As the sun sets, tiny little penguins waddle out of the sea and cross the sand to their burrows.\nThese are the smallest penguins in the world. They spend their days swimming and catching fish. At night, they return home to rest and feed their chicks.\nVisitors sit quietly and watch the penguins parade up the beach. People must not take photos, because the bright flashes can hurt the penguins' eyes.",
+    "question": "What do the penguins do during the day?",
+    "choices": [
+      { "text": "Sleep in their burrows", "correct": false },
+      { "text": "Swim and catch fish", "correct": true },
+      { "text": "Parade up the beach", "correct": false },
+      { "text": "Pose for photos", "correct": false }
+    ],
+    "explanation": "The text says they spend their days swimming and catching fish.",
+    "hint": "Read the second paragraph about their daytime."
+  },
+  {
+    "id": "r22",
+    "title": "Making Anzac Biscuits",
+    "passage": "Anzac biscuits are a famous Australian treat. To make them, you need oats, flour, sugar, butter, golden syrup, and coconut.\nFirst, mix the dry ingredients in a big bowl. Next, melt the butter and golden syrup in a saucepan. Then pour the warm mixture into the bowl and stir well.\nRoll the dough into small balls and place them on a baking tray. Finally, bake them in the oven until they are golden brown. Let them cool before you eat them — they will be hot!",
+    "question": "What kind of text is this?",
+    "choices": [
+      { "text": "A story about a holiday", "correct": false },
+      { "text": "A recipe with instructions", "correct": true },
+      { "text": "A letter to a friend", "correct": false },
+      { "text": "A poem about food", "correct": false }
+    ],
+    "explanation": "The text gives step-by-step instructions for making biscuits, so it is a recipe.",
+    "hint": "Notice the words First, Next, Then, Finally."
+  },
+  {
+    "id": "r23",
+    "title": "Making Anzac Biscuits",
+    "passage": "Anzac biscuits are a famous Australian treat. To make them, you need oats, flour, sugar, butter, golden syrup, and coconut.\nFirst, mix the dry ingredients in a big bowl. Next, melt the butter and golden syrup in a saucepan. Then pour the warm mixture into the bowl and stir well.\nRoll the dough into small balls and place them on a baking tray. Finally, bake them in the oven until they are golden brown. Let them cool before you eat them — they will be hot!",
+    "question": "What should you do first?",
+    "choices": [
+      { "text": "Bake the biscuits", "correct": false },
+      { "text": "Mix the dry ingredients in a bowl", "correct": true },
+      { "text": "Roll the dough into balls", "correct": false },
+      { "text": "Let them cool", "correct": false }
+    ],
+    "explanation": "The instructions say first, mix the dry ingredients in a big bowl.",
+    "hint": "Find the step that starts with 'First'."
+  },
+  {
+    "id": "r24",
+    "title": "Making Anzac Biscuits",
+    "passage": "Anzac biscuits are a famous Australian treat. To make them, you need oats, flour, sugar, butter, golden syrup, and coconut.\nFirst, mix the dry ingredients in a big bowl. Next, melt the butter and golden syrup in a saucepan. Then pour the warm mixture into the bowl and stir well.\nRoll the dough into small balls and place them on a baking tray. Finally, bake them in the oven until they are golden brown. Let them cool before you eat them — they will be hot!",
+    "question": "Why should you let the biscuits cool before eating?",
+    "choices": [
+      { "text": "They will be hot", "correct": true },
+      { "text": "They taste better cold", "correct": false },
+      { "text": "They are not finished", "correct": false },
+      { "text": "They need more sugar", "correct": false }
+    ],
+    "explanation": "The text warns that the biscuits will be hot.",
+    "hint": "Read the very last sentence."
+  },
+  {
+    "id": "r25",
+    "title": "Lost at the Market",
+    "passage": "Mia loved going to the Queen Victoria Market with her grandma. The market was full of colourful fruit, fresh bread, and people calling out prices.\nOne busy morning, Mia let go of her grandma's hand to look at some shiny red apples. When she turned around, her grandma was gone! Mia's heart began to pound.\nShe remembered her grandma's advice: \"If you ever get lost, find someone who works at a stall.\" Mia walked to a friendly baker, who helped her call out a message. Soon, her grandma came rushing over and hugged her tight.",
+    "question": "Where does this story take place?",
+    "choices": [
+      { "text": "At the beach", "correct": false },
+      { "text": "At the Queen Victoria Market", "correct": true },
+      { "text": "At school", "correct": false },
+      { "text": "At the zoo", "correct": false }
+    ],
+    "explanation": "The story is set at the Queen Victoria Market.",
+    "hint": "Look at the first sentence."
+  },
+  {
+    "id": "r26",
+    "title": "Lost at the Market",
+    "passage": "Mia loved going to the Queen Victoria Market with her grandma. The market was full of colourful fruit, fresh bread, and people calling out prices.\nOne busy morning, Mia let go of her grandma's hand to look at some shiny red apples. When she turned around, her grandma was gone! Mia's heart began to pound.\nShe remembered her grandma's advice: \"If you ever get lost, find someone who works at a stall.\" Mia walked to a friendly baker, who helped her call out a message. Soon, her grandma came rushing over and hugged her tight.",
+    "question": "Why did Mia lose her grandma?",
+    "choices": [
+      { "text": "She fell asleep", "correct": false },
+      { "text": "She let go of her hand to look at apples", "correct": true },
+      { "text": "Her grandma ran away", "correct": false },
+      { "text": "The market closed", "correct": false }
+    ],
+    "explanation": "Mia let go of her grandma's hand to look at the shiny red apples.",
+    "hint": "What did Mia do in the second paragraph?"
+  },
+  {
+    "id": "r27",
+    "title": "Lost at the Market",
+    "passage": "Mia loved going to the Queen Victoria Market with her grandma. The market was full of colourful fruit, fresh bread, and people calling out prices.\nOne busy morning, Mia let go of her grandma's hand to look at some shiny red apples. When she turned around, her grandma was gone! Mia's heart began to pound.\nShe remembered her grandma's advice: \"If you ever get lost, find someone who works at a stall.\" Mia walked to a friendly baker, who helped her call out a message. Soon, her grandma came rushing over and hugged her tight.",
+    "question": "What does 'Mia's heart began to pound' tell us about how she felt?",
+    "choices": [
+      { "text": "She was scared", "correct": true },
+      { "text": "She was sleepy", "correct": false },
+      { "text": "She was hungry", "correct": false },
+      { "text": "She was bored", "correct": false }
+    ],
+    "explanation": "A pounding heart shows that Mia felt scared when she could not find her grandma.",
+    "hint": "Think about how you feel when your heart pounds quickly."
+  },
+  {
+    "id": "r28",
+    "title": "Lost at the Market",
+    "passage": "Mia loved going to the Queen Victoria Market with her grandma. The market was full of colourful fruit, fresh bread, and people calling out prices.\nOne busy morning, Mia let go of her grandma's hand to look at some shiny red apples. When she turned around, her grandma was gone! Mia's heart began to pound.\nShe remembered her grandma's advice: \"If you ever get lost, find someone who works at a stall.\" Mia walked to a friendly baker, who helped her call out a message. Soon, her grandma came rushing over and hugged her tight.",
+    "question": "What was grandma's good advice if Mia got lost?",
+    "choices": [
+      { "text": "Run home quickly", "correct": false },
+      { "text": "Find someone who works at a stall", "correct": true },
+      { "text": "Hide under a table", "correct": false },
+      { "text": "Buy some apples", "correct": false }
+    ],
+    "explanation": "Grandma's advice was to find someone who works at a stall.",
+    "hint": "Look for the words inside the quotation marks."
+  },
+  {
+    "id": "r29",
+    "title": "The Helpful Robot",
+    "passage": "Beep the robot lived in a busy classroom. Every morning, Beep rolled around handing out pencils and books to the students.\nOne day, the teacher dropped a box of crayons all over the floor. The crayons rolled everywhere! Beep zoomed about, scooping them up with its gentle arms.\nThe students cheered and clapped. \"Thank you, Beep!\" they shouted. Beep's lights blinked happily. It loved helping its friends at school.",
+    "question": "What is Beep?",
+    "choices": [
+      { "text": "A teacher", "correct": false },
+      { "text": "A robot", "correct": true },
+      { "text": "A student", "correct": false },
+      { "text": "A pet dog", "correct": false }
+    ],
+    "explanation": "The first sentence says Beep is a robot.",
+    "hint": "Read the very first line."
+  },
+  {
+    "id": "r30",
+    "title": "The Helpful Robot",
+    "passage": "Beep the robot lived in a busy classroom. Every morning, Beep rolled around handing out pencils and books to the students.\nOne day, the teacher dropped a box of crayons all over the floor. The crayons rolled everywhere! Beep zoomed about, scooping them up with its gentle arms.\nThe students cheered and clapped. \"Thank you, Beep!\" they shouted. Beep's lights blinked happily. It loved helping its friends at school.",
+    "question": "What did Beep do every morning?",
+    "choices": [
+      { "text": "Slept in the corner", "correct": false },
+      { "text": "Handed out pencils and books", "correct": true },
+      { "text": "Played games", "correct": false },
+      { "text": "Cleaned the windows", "correct": false }
+    ],
+    "explanation": "Beep rolled around handing out pencils and books to the students.",
+    "hint": "Look in the first paragraph."
+  },
+  {
+    "id": "r31",
+    "title": "The Helpful Robot",
+    "passage": "Beep the robot lived in a busy classroom. Every morning, Beep rolled around handing out pencils and books to the students.\nOne day, the teacher dropped a box of crayons all over the floor. The crayons rolled everywhere! Beep zoomed about, scooping them up with its gentle arms.\nThe students cheered and clapped. \"Thank you, Beep!\" they shouted. Beep's lights blinked happily. It loved helping its friends at school.",
+    "question": "How did Beep feel at the end of the story?",
+    "choices": [
+      { "text": "Angry", "correct": false },
+      { "text": "Happy", "correct": true },
+      { "text": "Tired", "correct": false },
+      { "text": "Scared", "correct": false }
+    ],
+    "explanation": "Beep's lights blinked happily, showing it felt happy to help.",
+    "hint": "Look at how Beep's lights blinked."
+  },
+  {
+    "id": "r32",
+    "title": "Australian Animals at Night",
+    "passage": "Many Australian animals are nocturnal. This means they sleep during the day and come out at night.\nThe sugar glider is one example. It has large eyes that help it see in the dark, and flaps of skin that let it glide between trees. Possums are also active at night, searching for fruit and leaves in city gardens.\nWhen the sun comes up, these animals find a safe, cosy place to sleep. Being awake at night helps them stay cool and hide from animals that hunt during the day.",
+    "question": "What does 'nocturnal' mean?",
+    "choices": [
+      { "text": "Sleeping at night and awake in the day", "correct": false },
+      { "text": "Sleeping in the day and awake at night", "correct": true },
+      { "text": "Always asleep", "correct": false },
+      { "text": "Living near the sea", "correct": false }
+    ],
+    "explanation": "The text explains nocturnal animals sleep during the day and come out at night.",
+    "hint": "The meaning is given in the first paragraph."
+  },
+  {
+    "id": "r33",
+    "title": "Australian Animals at Night",
+    "passage": "Many Australian animals are nocturnal. This means they sleep during the day and come out at night.\nThe sugar glider is one example. It has large eyes that help it see in the dark, and flaps of skin that let it glide between trees. Possums are also active at night, searching for fruit and leaves in city gardens.\nWhen the sun comes up, these animals find a safe, cosy place to sleep. Being awake at night helps them stay cool and hide from animals that hunt during the day.",
+    "question": "How does the sugar glider move between trees?",
+    "choices": [
+      { "text": "It hops", "correct": false },
+      { "text": "It glides using flaps of skin", "correct": true },
+      { "text": "It swims", "correct": false },
+      { "text": "It climbs slowly", "correct": false }
+    ],
+    "explanation": "The text says flaps of skin let the sugar glider glide between trees.",
+    "hint": "Read the part describing the sugar glider."
+  },
+  {
+    "id": "r34",
+    "title": "Australian Animals at Night",
+    "passage": "Many Australian animals are nocturnal. This means they sleep during the day and come out at night.\nThe sugar glider is one example. It has large eyes that help it see in the dark, and flaps of skin that let it glide between trees. Possums are also active at night, searching for fruit and leaves in city gardens.\nWhen the sun comes up, these animals find a safe, cosy place to sleep. Being awake at night helps them stay cool and hide from animals that hunt during the day.",
+    "question": "Why is being awake at night helpful for these animals?",
+    "choices": [
+      { "text": "It is warmer at night", "correct": false },
+      { "text": "It helps them stay cool and hide from daytime hunters", "correct": true },
+      { "text": "There is more food in the morning", "correct": false },
+      { "text": "They like the moon", "correct": false }
+    ],
+    "explanation": "The last paragraph says being awake at night helps them stay cool and hide from daytime hunters.",
+    "hint": "Read the final sentence."
+  },
+  {
+    "id": "r35",
+    "title": "The Big Footy Match",
+    "passage": "Noah pulled on his team's scarf and hurried into the stadium with his uncle. The crowd roared as the players ran onto the field.\nNoah's team was losing by six points. He clapped and cheered as loud as he could. In the last minute, his favourite player kicked a goal right between the posts!\nThe whole crowd jumped up, cheering. Noah's team had won by just one point. He would remember this exciting day for a long time.",
+    "question": "How was Noah feeling when his team kicked the winning goal?",
+    "choices": [
+      { "text": "Bored", "correct": false },
+      { "text": "Excited", "correct": true },
+      { "text": "Angry", "correct": false },
+      { "text": "Sleepy", "correct": false }
+    ],
+    "explanation": "Noah jumped up cheering and called it an exciting day, showing he was excited.",
+    "hint": "Look at how Noah and the crowd reacted."
+  },
+  {
+    "id": "r36",
+    "title": "The Big Footy Match",
+    "passage": "Noah pulled on his team's scarf and hurried into the stadium with his uncle. The crowd roared as the players ran onto the field.\nNoah's team was losing by six points. He clapped and cheered as loud as he could. In the last minute, his favourite player kicked a goal right between the posts!\nThe whole crowd jumped up, cheering. Noah's team had won by just one point. He would remember this exciting day for a long time.",
+    "question": "By how many points did Noah's team win?",
+    "choices": [
+      { "text": "One point", "correct": true },
+      { "text": "Six points", "correct": false },
+      { "text": "Ten points", "correct": false },
+      { "text": "They lost", "correct": false }
+    ],
+    "explanation": "The text says Noah's team won by just one point.",
+    "hint": "Read near the end of the story."
+  },
+  {
+    "id": "r37",
+    "title": "The Big Footy Match",
+    "passage": "Noah pulled on his team's scarf and hurried into the stadium with his uncle. The crowd roared as the players ran onto the field.\nNoah's team was losing by six points. He clapped and cheered as loud as he could. In the last minute, his favourite player kicked a goal right between the posts!\nThe whole crowd jumped up, cheering. Noah's team had won by just one point. He would remember this exciting day for a long time.",
+    "question": "Who did Noah go to the match with?",
+    "choices": [
+      { "text": "His teacher", "correct": false },
+      { "text": "His uncle", "correct": true },
+      { "text": "His sister", "correct": false },
+      { "text": "His best friend", "correct": false }
+    ],
+    "explanation": "The first paragraph says Noah hurried into the stadium with his uncle.",
+    "hint": "Look in the first sentence."
+  },
+  {
+    "id": "r38",
+    "title": "Recycling at Home",
+    "passage": "Recycling helps keep our planet clean. When we recycle, old things are made into new things instead of going to the rubbish tip.\nAt home, you can sort your rubbish. Paper, glass, and plastic bottles can go into the recycling bin. Food scraps can be turned into compost for the garden.\nEvery small action helps. If everyone recycles a little, together we can save trees, water, and energy.",
+    "question": "What is the main idea of this text?",
+    "choices": [
+      { "text": "How to cook food", "correct": false },
+      { "text": "Recycling helps keep the planet clean", "correct": true },
+      { "text": "How to plant a tree", "correct": false },
+      { "text": "Why bins are blue", "correct": false }
+    ],
+    "explanation": "The text is mainly about how recycling helps keep our planet clean.",
+    "hint": "Look at the first sentence for the big idea."
+  },
+  {
+    "id": "r39",
+    "title": "Recycling at Home",
+    "passage": "Recycling helps keep our planet clean. When we recycle, old things are made into new things instead of going to the rubbish tip.\nAt home, you can sort your rubbish. Paper, glass, and plastic bottles can go into the recycling bin. Food scraps can be turned into compost for the garden.\nEvery small action helps. If everyone recycles a little, together we can save trees, water, and energy.",
+    "question": "What can food scraps be turned into?",
+    "choices": [
+      { "text": "Plastic bottles", "correct": false },
+      { "text": "Compost for the garden", "correct": true },
+      { "text": "New paper", "correct": false },
+      { "text": "Glass", "correct": false }
+    ],
+    "explanation": "The text says food scraps can be turned into compost for the garden.",
+    "hint": "Read the second paragraph about sorting rubbish."
+  },
+  {
+    "id": "r40",
+    "title": "Recycling at Home",
+    "passage": "Recycling helps keep our planet clean. When we recycle, old things are made into new things instead of going to the rubbish tip.\nAt home, you can sort your rubbish. Paper, glass, and plastic bottles can go into the recycling bin. Food scraps can be turned into compost for the garden.\nEvery small action helps. If everyone recycles a little, together we can save trees, water, and energy.",
+    "question": "According to the text, what can we save by recycling?",
+    "choices": [
+      { "text": "Trees, water, and energy", "correct": true },
+      { "text": "Only money", "correct": false },
+      { "text": "Toys and games", "correct": false },
+      { "text": "Nothing at all", "correct": false }
+    ],
+    "explanation": "The last sentence says together we can save trees, water, and energy.",
+    "hint": "Read the final sentence."
+  },
+  {
+    "id": "r41",
+    "title": "The Silent Ninja",
+    "passage": "Kenji was training to become a ninja. Every morning, before the sun rose, he practised moving without making a sound.\nHis teacher, Master Aki, set him a test. \"Cross the wooden floor without it creaking,\" she said. The old boards squeaked at the smallest step.\nKenji breathed slowly and placed each foot near the edges of the boards, where they were strongest. Step by step, he crossed the floor in complete silence. Master Aki smiled. \"You move like a shadow now,\" she said proudly.",
+    "question": "What was Kenji training to become?",
+    "choices": [
+      { "text": "A teacher", "correct": false },
+      { "text": "A ninja", "correct": true },
+      { "text": "A dancer", "correct": false },
+      { "text": "A builder", "correct": false }
+    ],
+    "explanation": "The first sentence says Kenji was training to become a ninja.",
+    "hint": "Read the very first line."
+  },
+  {
+    "id": "r42",
+    "title": "The Silent Ninja",
+    "passage": "Kenji was training to become a ninja. Every morning, before the sun rose, he practised moving without making a sound.\nHis teacher, Master Aki, set him a test. \"Cross the wooden floor without it creaking,\" she said. The old boards squeaked at the smallest step.\nKenji breathed slowly and placed each foot near the edges of the boards, where they were strongest. Step by step, he crossed the floor in complete silence. Master Aki smiled. \"You move like a shadow now,\" she said proudly.",
+    "question": "How did Kenji stop the floor from creaking?",
+    "choices": [
+      { "text": "He ran across very fast", "correct": false },
+      { "text": "He stepped near the edges of the boards", "correct": true },
+      { "text": "He jumped over the floor", "correct": false },
+      { "text": "He took off his shoes", "correct": false }
+    ],
+    "explanation": "Kenji placed each foot near the edges of the boards, where they were strongest.",
+    "hint": "Read the third paragraph about how he stepped."
+  },
+  {
+    "id": "r43",
+    "title": "The Silent Ninja",
+    "passage": "Kenji was training to become a ninja. Every morning, before the sun rose, he practised moving without making a sound.\nHis teacher, Master Aki, set him a test. \"Cross the wooden floor without it creaking,\" she said. The old boards squeaked at the smallest step.\nKenji breathed slowly and placed each foot near the edges of the boards, where they were strongest. Step by step, he crossed the floor in complete silence. Master Aki smiled. \"You move like a shadow now,\" she said proudly.",
+    "question": "What did Master Aki mean by \"You move like a shadow now\"?",
+    "choices": [
+      { "text": "Kenji was very dark", "correct": false },
+      { "text": "Kenji moved quietly and unseen", "correct": true },
+      { "text": "Kenji was too slow", "correct": false },
+      { "text": "Kenji was scared", "correct": false }
+    ],
+    "explanation": "A shadow makes no sound and is hard to notice, so she meant he moved quietly and unseen.",
+    "hint": "Think about how a shadow moves — does it make noise?"
+  },
+  {
+    "id": "r44",
+    "title": "The Big Soccer Goal",
+    "passage": "Priya loved playing soccer for her local team, the Brunswick Bolts. On Saturday, they played in the grand final.\nThe score was tied with only two minutes left. Priya's coach called out, \"Pass the ball and look for space!\" Priya dribbled past two players and spotted her teammate, Zoe, near the goal.\nWith a strong kick, Priya passed the ball to Zoe, who scored the winning goal. The whole team cheered and hugged. Priya learned that working together was even better than scoring by herself.",
+    "question": "What is the name of Priya's soccer team?",
+    "choices": [
+      { "text": "The Brunswick Bolts", "correct": true },
+      { "text": "The City Stars", "correct": false },
+      { "text": "The Fitzroy Foxes", "correct": false },
+      { "text": "The Yarra Yabbies", "correct": false }
+    ],
+    "explanation": "The first paragraph says Priya played for the Brunswick Bolts.",
+    "hint": "Look in the first paragraph for the team's name."
+  },
+  {
+    "id": "r45",
+    "title": "The Big Soccer Goal",
+    "passage": "Priya loved playing soccer for her local team, the Brunswick Bolts. On Saturday, they played in the grand final.\nThe score was tied with only two minutes left. Priya's coach called out, \"Pass the ball and look for space!\" Priya dribbled past two players and spotted her teammate, Zoe, near the goal.\nWith a strong kick, Priya passed the ball to Zoe, who scored the winning goal. The whole team cheered and hugged. Priya learned that working together was even better than scoring by herself.",
+    "question": "Who scored the winning goal?",
+    "choices": [
+      { "text": "Priya", "correct": false },
+      { "text": "Zoe", "correct": true },
+      { "text": "The coach", "correct": false },
+      { "text": "No one", "correct": false }
+    ],
+    "explanation": "Priya passed the ball to Zoe, who scored the winning goal.",
+    "hint": "Read the third paragraph carefully."
+  },
+  {
+    "id": "r46",
+    "title": "The Big Soccer Goal",
+    "passage": "Priya loved playing soccer for her local team, the Brunswick Bolts. On Saturday, they played in the grand final.\nThe score was tied with only two minutes left. Priya's coach called out, \"Pass the ball and look for space!\" Priya dribbled past two players and spotted her teammate, Zoe, near the goal.\nWith a strong kick, Priya passed the ball to Zoe, who scored the winning goal. The whole team cheered and hugged. Priya learned that working together was even better than scoring by herself.",
+    "question": "What lesson did Priya learn?",
+    "choices": [
+      { "text": "Working together is better than scoring alone", "correct": true },
+      { "text": "Soccer is boring", "correct": false },
+      { "text": "It is best to keep the ball to yourself", "correct": false },
+      { "text": "Winning does not matter", "correct": false }
+    ],
+    "explanation": "The last sentence says Priya learned that working together was even better than scoring by herself.",
+    "hint": "Read the very last sentence."
+  },
+  {
+    "id": "r47",
+    "title": "The Haunted Forest",
+    "passage": "Mila and her brother Theo took a shortcut through the old forest on the way home. Tall trees blocked out the sunlight, and a cold mist curled around their feet.\nSuddenly, they heard a low moan and saw a glowing shape between the trees. Theo froze, but Mila stepped closer to look. The 'ghost' was really an old white sheet caught on a branch, flapping in the wind. The moaning sound came from the wind whistling through a hollow log.\nThe children laughed at how scared they had been. They walked home, telling everyone about the forest that only seemed haunted.",
+    "question": "What did the glowing 'ghost' turn out to be?",
+    "choices": [
+      { "text": "A real ghost", "correct": false },
+      { "text": "An old white sheet caught on a branch", "correct": true },
+      { "text": "A large owl", "correct": false },
+      { "text": "A torch", "correct": false }
+    ],
+    "explanation": "The 'ghost' was really an old white sheet caught on a branch, flapping in the wind.",
+    "hint": "Read the second paragraph where the mystery is explained."
+  },
+  {
+    "id": "r48",
+    "title": "The Haunted Forest",
+    "passage": "Mila and her brother Theo took a shortcut through the old forest on the way home. Tall trees blocked out the sunlight, and a cold mist curled around their feet.\nSuddenly, they heard a low moan and saw a glowing shape between the trees. Theo froze, but Mila stepped closer to look. The 'ghost' was really an old white sheet caught on a branch, flapping in the wind. The moaning sound came from the wind whistling through a hollow log.\nThe children laughed at how scared they had been. They walked home, telling everyone about the forest that only seemed haunted.",
+    "question": "What made the moaning sound?",
+    "choices": [
+      { "text": "A monster", "correct": false },
+      { "text": "The wind whistling through a hollow log", "correct": true },
+      { "text": "Theo crying", "correct": false },
+      { "text": "A barking dog", "correct": false }
+    ],
+    "explanation": "The moaning sound came from the wind whistling through a hollow log.",
+    "hint": "Look for what caused the sound in the second paragraph."
+  },
+  {
+    "id": "r49",
+    "title": "The Haunted Forest",
+    "passage": "Mila and her brother Theo took a shortcut through the old forest on the way home. Tall trees blocked out the sunlight, and a cold mist curled around their feet.\nSuddenly, they heard a low moan and saw a glowing shape between the trees. Theo froze, but Mila stepped closer to look. The 'ghost' was really an old white sheet caught on a branch, flapping in the wind. The moaning sound came from the wind whistling through a hollow log.\nThe children laughed at how scared they had been. They walked home, telling everyone about the forest that only seemed haunted.",
+    "question": "How did Mila and Theo feel at the end of the story?",
+    "choices": [
+      { "text": "Still terrified", "correct": false },
+      { "text": "They laughed because there was nothing to fear", "correct": true },
+      { "text": "Angry at each other", "correct": false },
+      { "text": "Sad to go home", "correct": false }
+    ],
+    "explanation": "The children laughed at how scared they had been once they found the real cause.",
+    "hint": "Read the last paragraph about how they felt."
+  },
+  {
+    "id": "r50",
+    "title": "The Haunted House on the Hill",
+    "passage": "At the top of the hill stood an old house that everyone called haunted. Its windows were dusty and the gate squeaked loudly.\nOne afternoon, brave young Sam decided to find out the truth. He pushed open the creaky gate and knocked on the door. To his surprise, a friendly old man named Mr Bell answered.\nMr Bell explained that he lived alone and could not fix the squeaky gate or clean the high windows. Sam offered to help. Soon the house looked bright and welcoming, and the neighbours stopped calling it haunted.",
+    "question": "Why did everyone think the house was haunted?",
+    "choices": [
+      { "text": "It had dusty windows and a squeaky gate", "correct": true },
+      { "text": "Ghosts lived there", "correct": false },
+      { "text": "It was painted black", "correct": false },
+      { "text": "Strange lights flashed at night", "correct": false }
+    ],
+    "explanation": "The house had dusty windows and a loudly squeaking gate, which made it seem haunted.",
+    "hint": "Read the first paragraph describing the house."
+  },
+  {
+    "id": "r51",
+    "title": "The Haunted House on the Hill",
+    "passage": "At the top of the hill stood an old house that everyone called haunted. Its windows were dusty and the gate squeaked loudly.\nOne afternoon, brave young Sam decided to find out the truth. He pushed open the creaky gate and knocked on the door. To his surprise, a friendly old man named Mr Bell answered.\nMr Bell explained that he lived alone and could not fix the squeaky gate or clean the high windows. Sam offered to help. Soon the house looked bright and welcoming, and the neighbours stopped calling it haunted.",
+    "question": "Who really lived in the house?",
+    "choices": [
+      { "text": "A ghost", "correct": false },
+      { "text": "A friendly old man named Mr Bell", "correct": true },
+      { "text": "Nobody", "correct": false },
+      { "text": "Sam's family", "correct": false }
+    ],
+    "explanation": "A friendly old man named Mr Bell answered the door.",
+    "hint": "Read the second paragraph about who opened the door."
+  },
+  {
+    "id": "r52",
+    "title": "The Haunted House on the Hill",
+    "passage": "At the top of the hill stood an old house that everyone called haunted. Its windows were dusty and the gate squeaked loudly.\nOne afternoon, brave young Sam decided to find out the truth. He pushed open the creaky gate and knocked on the door. To his surprise, a friendly old man named Mr Bell answered.\nMr Bell explained that he lived alone and could not fix the squeaky gate or clean the high windows. Sam offered to help. Soon the house looked bright and welcoming, and the neighbours stopped calling it haunted.",
+    "question": "How did Sam help Mr Bell?",
+    "choices": [
+      { "text": "He fixed the gate and cleaned the windows", "correct": true },
+      { "text": "He scared the ghosts away", "correct": false },
+      { "text": "He sold the house", "correct": false },
+      { "text": "He moved in with him", "correct": false }
+    ],
+    "explanation": "Sam offered to help, and soon the house looked bright and welcoming after the gate and windows were sorted.",
+    "hint": "Read the last paragraph about what Sam did."
+  },
+  {
+    "id": "r53",
+    "title": "Deep in the Ocean",
+    "passage": "Far below the waves, the ocean is full of amazing creatures. Near the top, where sunlight reaches, colourful fish dart between the coral.\nDeeper down, it grows dark and cold. Some fish here make their own light to find food, glowing like tiny lanterns. Giant whales swim through these waters, singing songs that travel for many kilometres.\nAt the very bottom, strange animals live in the darkness. Scientists use special submarines to explore these deep places, where no sunlight has ever reached.",
+    "question": "Why can colourful fish live near the top of the ocean?",
+    "choices": [
+      { "text": "Because sunlight reaches there", "correct": true },
+      { "text": "Because it is the coldest part", "correct": false },
+      { "text": "Because whales protect them", "correct": false },
+      { "text": "Because there is no water there", "correct": false }
+    ],
+    "explanation": "The text says near the top, sunlight reaches, and colourful fish dart between the coral.",
+    "hint": "Read the first paragraph about the top of the ocean."
+  },
+  {
+    "id": "r54",
+    "title": "Deep in the Ocean",
+    "passage": "Far below the waves, the ocean is full of amazing creatures. Near the top, where sunlight reaches, colourful fish dart between the coral.\nDeeper down, it grows dark and cold. Some fish here make their own light to find food, glowing like tiny lanterns. Giant whales swim through these waters, singing songs that travel for many kilometres.\nAt the very bottom, strange animals live in the darkness. Scientists use special submarines to explore these deep places, where no sunlight has ever reached.",
+    "question": "How do some deep-sea fish find food in the dark?",
+    "choices": [
+      { "text": "They follow the whales", "correct": false },
+      { "text": "They make their own light", "correct": true },
+      { "text": "They swim to the top", "correct": false },
+      { "text": "They use submarines", "correct": false }
+    ],
+    "explanation": "Some fish make their own light to find food, glowing like tiny lanterns.",
+    "hint": "Read the second paragraph about the deeper, darker water."
+  },
+  {
+    "id": "r55",
+    "title": "Deep in the Ocean",
+    "passage": "Far below the waves, the ocean is full of amazing creatures. Near the top, where sunlight reaches, colourful fish dart between the coral.\nDeeper down, it grows dark and cold. Some fish here make their own light to find food, glowing like tiny lanterns. Giant whales swim through these waters, singing songs that travel for many kilometres.\nAt the very bottom, strange animals live in the darkness. Scientists use special submarines to explore these deep places, where no sunlight has ever reached.",
+    "question": "How do scientists explore the very deep ocean?",
+    "choices": [
+      { "text": "By swimming", "correct": false },
+      { "text": "Using special submarines", "correct": true },
+      { "text": "By draining the water", "correct": false },
+      { "text": "On surfboards", "correct": false }
+    ],
+    "explanation": "The last paragraph says scientists use special submarines to explore the deep places.",
+    "hint": "Read the final sentence."
+  },
+  {
+    "id": "r56",
+    "title": "The Candy Thief",
+    "passage": "Each morning, Lucy found that lollies were missing from the jar on the kitchen bench. \"Who is the candy thief?\" she wondered.\nLucy decided to solve the mystery. That night, she hid behind the door and watched the jar. After a while, she heard a tiny scratching sound. It was not her little brother at all — it was a clever pet mouse named Squeak, climbing up to nibble the sweets!\nLucy gently moved the jar to a high shelf with a tight lid. The mystery was solved, and Squeak had to find his snacks somewhere else.",
+    "question": "What was going missing from the jar?",
+    "choices": [
+      { "text": "Coins", "correct": false },
+      { "text": "Lollies", "correct": true },
+      { "text": "Keys", "correct": false },
+      { "text": "Biscuits", "correct": false }
+    ],
+    "explanation": "The first paragraph says lollies were missing from the jar.",
+    "hint": "Read the first sentence."
+  },
+  {
+    "id": "r57",
+    "title": "The Candy Thief",
+    "passage": "Each morning, Lucy found that lollies were missing from the jar on the kitchen bench. \"Who is the candy thief?\" she wondered.\nLucy decided to solve the mystery. That night, she hid behind the door and watched the jar. After a while, she heard a tiny scratching sound. It was not her little brother at all — it was a clever pet mouse named Squeak, climbing up to nibble the sweets!\nLucy gently moved the jar to a high shelf with a tight lid. The mystery was solved, and Squeak had to find his snacks somewhere else.",
+    "question": "Who was the real candy thief?",
+    "choices": [
+      { "text": "Her little brother", "correct": false },
+      { "text": "A pet mouse named Squeak", "correct": true },
+      { "text": "Her mum", "correct": false },
+      { "text": "A bird", "correct": false }
+    ],
+    "explanation": "The thief was a clever pet mouse named Squeak.",
+    "hint": "Read the second paragraph about the scratching sound."
+  },
+  {
+    "id": "r58",
+    "title": "The Candy Thief",
+    "passage": "Each morning, Lucy found that lollies were missing from the jar on the kitchen bench. \"Who is the candy thief?\" she wondered.\nLucy decided to solve the mystery. That night, she hid behind the door and watched the jar. After a while, she heard a tiny scratching sound. It was not her little brother at all — it was a clever pet mouse named Squeak, climbing up to nibble the sweets!\nLucy gently moved the jar to a high shelf with a tight lid. The mystery was solved, and Squeak had to find his snacks somewhere else.",
+    "question": "How did Lucy stop the lollies from going missing?",
+    "choices": [
+      { "text": "She ate them all", "correct": false },
+      { "text": "She moved the jar to a high shelf with a tight lid", "correct": true },
+      { "text": "She gave Squeak away", "correct": false },
+      { "text": "She bought a bigger jar", "correct": false }
+    ],
+    "explanation": "Lucy gently moved the jar to a high shelf with a tight lid.",
+    "hint": "Read the last paragraph for the solution."
+  },
+  {
+    "id": "r59",
+    "title": "The Young Scientist",
+    "passage": "Aisha loved doing experiments in her garage. Her favourite was making a volcano that fizzed and bubbled.\nShe poured baking soda into a bottle shaped like a mountain. Then she added vinegar mixed with red food colouring. At once, the mixture foamed up and spilled over the top like red lava!\nAisha wrote down what happened in her science notebook. A good scientist, she knew, always records what they see. She could not wait to try a new experiment the next day.",
+    "question": "What was Aisha's favourite experiment?",
+    "choices": [
+      { "text": "Growing plants", "correct": false },
+      { "text": "Making a fizzing volcano", "correct": true },
+      { "text": "Building a robot", "correct": false },
+      { "text": "Mixing paint", "correct": false }
+    ],
+    "explanation": "Her favourite experiment was making a volcano that fizzed and bubbled.",
+    "hint": "Read the first paragraph."
+  },
+  {
+    "id": "r60",
+    "title": "The Young Scientist",
+    "passage": "Aisha loved doing experiments in her garage. Her favourite was making a volcano that fizzed and bubbled.\nShe poured baking soda into a bottle shaped like a mountain. Then she added vinegar mixed with red food colouring. At once, the mixture foamed up and spilled over the top like red lava!\nAisha wrote down what happened in her science notebook. A good scientist, she knew, always records what they see. She could not wait to try a new experiment the next day.",
+    "question": "What two things did Aisha mix to make the volcano erupt?",
+    "choices": [
+      { "text": "Water and sand", "correct": false },
+      { "text": "Baking soda and vinegar", "correct": true },
+      { "text": "Milk and sugar", "correct": false },
+      { "text": "Oil and salt", "correct": false }
+    ],
+    "explanation": "She added vinegar to baking soda, which made the mixture foam up.",
+    "hint": "Read the second paragraph about what she poured and added."
+  },
+  {
+    "id": "r61",
+    "title": "The Young Scientist",
+    "passage": "Aisha loved doing experiments in her garage. Her favourite was making a volcano that fizzed and bubbled.\nShe poured baking soda into a bottle shaped like a mountain. Then she added vinegar mixed with red food colouring. At once, the mixture foamed up and spilled over the top like red lava!\nAisha wrote down what happened in her science notebook. A good scientist, she knew, always records what they see. She could not wait to try a new experiment the next day.",
+    "question": "Why did Aisha write in her science notebook?",
+    "choices": [
+      { "text": "A good scientist records what they see", "correct": true },
+      { "text": "She was doing homework", "correct": false },
+      { "text": "She was drawing pictures", "correct": false },
+      { "text": "She wanted to sell it", "correct": false }
+    ],
+    "explanation": "The text says a good scientist always records what they see.",
+    "hint": "Read the last paragraph about being a good scientist."
+  },
+  {
+    "id": "r62",
+    "title": "A Visit to the Doctor",
+    "passage": "Noah had a sore throat, so his mum took him to see Dr Lee. Noah felt a little worried as he sat in the waiting room.\nDr Lee was kind and gentle. She used a small torch to look inside Noah's throat and listened to his chest with a stethoscope. \"You have a mild infection,\" she said with a smile. \"Lots of rest and water will help you feel better.\"\nNoah felt much calmer. He realised that doctors are there to help us stay healthy, not to be scared of.",
+    "question": "Why did Noah go to see Dr Lee?",
+    "choices": [
+      { "text": "He had a sore throat", "correct": true },
+      { "text": "He broke his arm", "correct": false },
+      { "text": "For a haircut", "correct": false },
+      { "text": "To get a needle", "correct": false }
+    ],
+    "explanation": "The first sentence says Noah had a sore throat.",
+    "hint": "Read the first paragraph."
+  },
+  {
+    "id": "r63",
+    "title": "A Visit to the Doctor",
+    "passage": "Noah had a sore throat, so his mum took him to see Dr Lee. Noah felt a little worried as he sat in the waiting room.\nDr Lee was kind and gentle. She used a small torch to look inside Noah's throat and listened to his chest with a stethoscope. \"You have a mild infection,\" she said with a smile. \"Lots of rest and water will help you feel better.\"\nNoah felt much calmer. He realised that doctors are there to help us stay healthy, not to be scared of.",
+    "question": "What did Dr Lee use to listen to Noah's chest?",
+    "choices": [
+      { "text": "A torch", "correct": false },
+      { "text": "A stethoscope", "correct": true },
+      { "text": "A thermometer", "correct": false },
+      { "text": "A bandage", "correct": false }
+    ],
+    "explanation": "She listened to his chest with a stethoscope.",
+    "hint": "Read the second paragraph about the tools she used."
+  },
+  {
+    "id": "r64",
+    "title": "A Visit to the Doctor",
+    "passage": "Noah had a sore throat, so his mum took him to see Dr Lee. Noah felt a little worried as he sat in the waiting room.\nDr Lee was kind and gentle. She used a small torch to look inside Noah's throat and listened to his chest with a stethoscope. \"You have a mild infection,\" she said with a smile. \"Lots of rest and water will help you feel better.\"\nNoah felt much calmer. He realised that doctors are there to help us stay healthy, not to be scared of.",
+    "question": "What did Noah realise by the end of the story?",
+    "choices": [
+      { "text": "Doctors are there to help us, not to be scared of", "correct": true },
+      { "text": "He never wants to see a doctor again", "correct": false },
+      { "text": "Sore throats last forever", "correct": false },
+      { "text": "Water tastes bad", "correct": false }
+    ],
+    "explanation": "Noah realised that doctors are there to help us stay healthy, not to be scared of.",
+    "hint": "Read the last paragraph about how Noah felt."
+  },
+  {
+    "id": "r65",
+    "title": "Diwali in India",
+    "passage": "Anya was excited because it was time for Diwali, the festival of lights. Her family had travelled to visit her grandparents in India.\nEvery evening, they lit small clay lamps called diyas and placed them around the house. The little flames glowed warmly in the dark. Colourful patterns called rangoli were drawn on the floor using bright powders.\nThe whole street sparkled with lights, and families shared sweets called mithai. Anya thought it was the most beautiful celebration she had ever seen.",
+    "question": "What festival is the story about?",
+    "choices": [
+      { "text": "Diwali, the festival of lights", "correct": true },
+      { "text": "A birthday party", "correct": false },
+      { "text": "New Year's Eve", "correct": false },
+      { "text": "A sports day", "correct": false }
+    ],
+    "explanation": "The story is about Diwali, the festival of lights.",
+    "hint": "Read the first sentence."
+  },
+  {
+    "id": "r66",
+    "title": "Diwali in India",
+    "passage": "Anya was excited because it was time for Diwali, the festival of lights. Her family had travelled to visit her grandparents in India.\nEvery evening, they lit small clay lamps called diyas and placed them around the house. The little flames glowed warmly in the dark. Colourful patterns called rangoli were drawn on the floor using bright powders.\nThe whole street sparkled with lights, and families shared sweets called mithai. Anya thought it was the most beautiful celebration she had ever seen.",
+    "question": "What are the small clay lamps called?",
+    "choices": [
+      { "text": "Rangoli", "correct": false },
+      { "text": "Diyas", "correct": true },
+      { "text": "Mithai", "correct": false },
+      { "text": "Candles", "correct": false }
+    ],
+    "explanation": "The small clay lamps are called diyas.",
+    "hint": "Read the second paragraph about the lamps."
+  },
+  {
+    "id": "r67",
+    "title": "Diwali in India",
+    "passage": "Anya was excited because it was time for Diwali, the festival of lights. Her family had travelled to visit her grandparents in India.\nEvery evening, they lit small clay lamps called diyas and placed them around the house. The little flames glowed warmly in the dark. Colourful patterns called rangoli were drawn on the floor using bright powders.\nThe whole street sparkled with lights, and families shared sweets called mithai. Anya thought it was the most beautiful celebration she had ever seen.",
+    "question": "What sweets did families share during the festival?",
+    "choices": [
+      { "text": "Mithai", "correct": true },
+      { "text": "Diyas", "correct": false },
+      { "text": "Rangoli", "correct": false },
+      { "text": "Ice cream", "correct": false }
+    ],
+    "explanation": "Families shared sweets called mithai.",
+    "hint": "Read the last paragraph about the sweets."
   }
 ]

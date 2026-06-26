@@ -1,12 +1,65 @@
+const SECTION_SIZE = 8;
+
 class QuizEngine {
   constructor(containerId, questions, options = {}) {
     this.container = document.getElementById(containerId);
-    this.questions = shuffleArray(questions);
+    this.allQuestions = questions;
     this.domain = options.domain || 'reading';
-    this.currentIndex = 0;
-    this.answered = false;
     this.mascot = options.mascot || '🐨';
     this.onComplete = options.onComplete || null;
+    this.subjectName = options.subjectName || 'Quiz';
+    this.sections = this.buildSections(questions);
+    this.completedSections = new Set();
+    this.questions = [];
+    this.sectionIndex = 0;
+    this.currentIndex = 0;
+    this.answered = false;
+    this.showSectionPicker();
+  }
+
+  buildSections(questions) {
+    const sections = [];
+    for (let i = 0; i < questions.length; i += SECTION_SIZE) {
+      sections.push(questions.slice(i, i + SECTION_SIZE));
+    }
+    return sections;
+  }
+
+  showSectionPicker() {
+    if (!this.container || this.sections.length === 0) return;
+
+    this.container.innerHTML = `
+      <div class="quiz-card">
+        <div class="mascot-speech">
+          <span class="mascot-mini">${this.mascot}</span>
+          <span>Pick a section to start! Each section has ${SECTION_SIZE} questions.</span>
+        </div>
+        <div class="section-grid">
+          ${this.sections.map((sec, i) => {
+            const start = i * SECTION_SIZE + 1;
+            const end = i * SECTION_SIZE + sec.length;
+            const done = this.completedSections.has(i);
+            return `
+              <button class="section-card ${done ? 'done' : ''}" data-section="${i}">
+                <span class="section-num">${done ? '✅' : i + 1}</span>
+                <span class="section-title">Section ${i + 1}</span>
+                <span class="section-range">Questions ${start}–${end}</span>
+              </button>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+
+    this.container.querySelectorAll('.section-card').forEach((btn) => {
+      btn.addEventListener('click', () => this.startSection(parseInt(btn.dataset.section, 10)));
+    });
+  }
+
+  startSection(index) {
+    this.sectionIndex = index;
+    this.questions = shuffleArray(this.sections[index]);
+    this.currentIndex = 0;
     this.render();
   }
 
@@ -18,6 +71,10 @@ class QuizEngine {
 
     this.container.innerHTML = `
       <div class="quiz-card">
+        <div class="quiz-section-bar">
+          <button class="btn-link" id="quiz-back-sections">← Sections</button>
+          <span class="quiz-section-label">Section ${this.sectionIndex + 1} of ${this.sections.length}</span>
+        </div>
         <div class="mascot-speech">
           <span class="mascot-mini">${this.mascot}</span>
           <span>${q.intro || 'Read carefully and choose the best answer!'}</span>
@@ -49,6 +106,8 @@ class QuizEngine {
       btn.addEventListener('click', () => this.handleAnswer(btn));
     });
 
+    document.getElementById('quiz-back-sections')?.addEventListener('click', () => this.showSectionPicker());
+
     const nextBtn = document.getElementById('quiz-next');
     if (nextBtn) {
       nextBtn.addEventListener('click', () => this.next());
@@ -76,9 +135,6 @@ class QuizEngine {
       awardStar(this.domain, q.id);
       feedback.classList.add('success');
       feedback.textContent = cheerOnCorrect(q.explanation || '');
-      if (this.currentIndex === this.questions.length - 1) {
-        setTimeout(() => showCelebration(`${getChildName()}, you finished all the questions!`, '🌟'), 600);
-      }
     } else {
       feedback.classList.add('hint');
       feedback.textContent = `💡 ${q.hint || randomItem(HINTS)}`;
@@ -94,27 +150,33 @@ class QuizEngine {
     if (this.currentIndex < this.questions.length - 1) {
       this.currentIndex++;
       this.render();
-    } else if (this.onComplete) {
-      this.onComplete();
     } else {
-      this.showPlayAgain();
+      this.completedSections.add(this.sectionIndex);
+      if (this.onComplete) this.onComplete();
+      this.showSectionComplete();
     }
   }
 
-  showPlayAgain() {
+  showSectionComplete() {
+    const hasNext = this.sectionIndex < this.sections.length - 1;
+    setTimeout(() => showCelebration(`${getChildName()}, you finished Section ${this.sectionIndex + 1}!`, '🌟'), 300);
+
     this.container.innerHTML = `
       <div class="quiz-card" style="text-align:center">
         <div style="font-size:4rem;margin-bottom:0.5rem">🌟</div>
-        <h2>All done!</h2>
-        <p style="margin:1rem 0;color:var(--ink-light)">Great work! Want to try again with new questions?</p>
-        <button class="btn btn-primary" id="quiz-restart">Shuffle & Play Again</button>
+        <h2>Section ${this.sectionIndex + 1} complete!</h2>
+        <p style="margin:1rem 0;color:var(--ink-light)">Great work! What would you like to do next?</p>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center">
+          ${hasNext ? '<button class="btn btn-primary" id="quiz-next-section">Next Section →</button>' : ''}
+          <button class="btn btn-secondary" id="quiz-replay-section">Replay This Section</button>
+          <button class="btn btn-secondary" id="quiz-choose-section">Choose a Section</button>
+        </div>
       </div>
     `;
-    document.getElementById('quiz-restart')?.addEventListener('click', () => {
-      this.questions = shuffleArray(this.questions);
-      this.currentIndex = 0;
-      this.render();
-    });
+
+    document.getElementById('quiz-next-section')?.addEventListener('click', () => this.startSection(this.sectionIndex + 1));
+    document.getElementById('quiz-replay-section')?.addEventListener('click', () => this.startSection(this.sectionIndex));
+    document.getElementById('quiz-choose-section')?.addEventListener('click', () => this.showSectionPicker());
   }
 }
 
@@ -129,7 +191,7 @@ function initReadingQuiz() {
   const el = document.getElementById('reading-quiz');
   if (!el) return;
   loadQuizData('data/reading-year3.json')
-    .then((data) => new QuizEngine('reading-quiz', data, { domain: 'reading', mascot: '🐨' }))
+    .then((data) => new QuizEngine('reading-quiz', data, { domain: 'reading', mascot: '🐨', subjectName: 'Reading' }))
     .catch(() => { el.innerHTML = '<p>Could not load questions. Please refresh.</p>'; });
 }
 
@@ -137,7 +199,7 @@ function initNumeracyQuiz() {
   const el = document.getElementById('numeracy-quiz');
   if (!el) return;
   loadQuizData('data/numeracy-year3.json')
-    .then((data) => new QuizEngine('numeracy-quiz', data, { domain: 'numeracy', mascot: '🦘' }))
+    .then((data) => new QuizEngine('numeracy-quiz', data, { domain: 'numeracy', mascot: '🦘', subjectName: 'Numeracy' }))
     .catch(() => { el.innerHTML = '<p>Could not load questions. Please refresh.</p>'; });
 }
 
@@ -145,10 +207,13 @@ function initGrammarQuiz() {
   const el = document.getElementById('grammar-quiz');
   if (!el) return;
   loadQuizData('data/grammar-year3.json')
-    .then((data) => new QuizEngine('grammar-quiz', data, { domain: 'language', mascot: '🌊' }))
+    .then((data) => new QuizEngine('grammar-quiz', data, { domain: 'language', mascot: '🌊', subjectName: 'Grammar' }))
     .catch(() => { el.innerHTML = '<p>Could not load questions. Please refresh.</p>'; });
 }
 
+let spellingAll = [];
+let spellingSections = [];
+let spellingSectionIndex = 0;
 let spellingData = [];
 let spellingIndex = 0;
 
@@ -156,24 +221,72 @@ async function initSpellingGame() {
   const container = document.getElementById('spelling-game');
   if (!container) return;
   try {
-    spellingData = shuffleArray(await loadQuizData('data/spelling-year3.json'));
-    spellingIndex = 0;
-    renderSpellingRound();
+    spellingAll = await loadQuizData('data/spelling-year3.json');
+    spellingSections = [];
+    for (let i = 0; i < spellingAll.length; i += SECTION_SIZE) {
+      spellingSections.push(spellingAll.slice(i, i + SECTION_SIZE));
+    }
+    renderSpellingSectionPicker();
   } catch {
     container.innerHTML = '<p>Could not load spelling words.</p>';
   }
+}
+
+function renderSpellingSectionPicker() {
+  const container = document.getElementById('spelling-game');
+  if (!container || spellingSections.length === 0) return;
+
+  container.innerHTML = `
+    <div class="quiz-card">
+      <div class="mascot-speech">
+        <span class="mascot-mini">🌊</span>
+        <span>Pick a spelling section to start! Each section has ${SECTION_SIZE} words.</span>
+      </div>
+      <div class="section-grid">
+        ${spellingSections.map((sec, i) => {
+          const start = i * SECTION_SIZE + 1;
+          const end = i * SECTION_SIZE + sec.length;
+          return `
+            <button class="section-card" data-section="${i}">
+              <span class="section-num">${i + 1}</span>
+              <span class="section-title">Section ${i + 1}</span>
+              <span class="section-range">Words ${start}–${end}</span>
+            </button>
+          `;
+        }).join('')}
+      </div>
+    </div>
+  `;
+
+  container.querySelectorAll('.section-card').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      spellingSectionIndex = parseInt(btn.dataset.section, 10);
+      spellingData = shuffleArray(spellingSections[spellingSectionIndex]);
+      spellingIndex = 0;
+      renderSpellingRound();
+    });
+  });
 }
 
 function renderSpellingRound() {
   const container = document.getElementById('spelling-game');
   if (!container || spellingData.length === 0) return;
 
-  const word = spellingData[spellingIndex % spellingData.length];
+  if (spellingIndex >= spellingData.length) {
+    renderSpellingSectionComplete();
+    return;
+  }
+
+  const word = spellingData[spellingIndex];
   container.innerHTML = `
     <div class="quiz-card spelling-game">
+      <div class="quiz-section-bar">
+        <button class="btn-link" id="spelling-back-sections">← Sections</button>
+        <span class="quiz-section-label">Section ${spellingSectionIndex + 1} of ${spellingSections.length}</span>
+      </div>
       <div class="mascot-speech">
         <span class="mascot-mini">🌊</span>
-        <span>Listen to the word and spell it! Word ${(spellingIndex % spellingData.length) + 1} of ${spellingData.length}</span>
+        <span>Listen to the word and spell it! Word ${spellingIndex + 1} of ${spellingData.length}</span>
       </div>
       <div class="parent-tip">💡 Parent tip: Read the hint aloud. For "${word.word}", say: "${word.sentence.replace('___', 'blank')}" and let your child fill in the blank.</div>
       <p style="font-size:1.1rem;margin:1rem 0">${word.hint}</p>
@@ -189,6 +302,8 @@ function renderSpellingRound() {
       </div>
     </div>
   `;
+
+  document.getElementById('spelling-back-sections')?.addEventListener('click', renderSpellingSectionPicker);
 
   document.getElementById('speak-word')?.addEventListener('click', () => {
     if ('speechSynthesis' in window) {
@@ -232,11 +347,41 @@ function renderSpellingRound() {
 
   document.getElementById('next-spelling')?.addEventListener('click', () => {
     spellingIndex++;
-    if (spellingIndex > 0 && spellingIndex % spellingData.length === 0) {
-      spellingData = shuffleArray(spellingData);
-    }
     renderSpellingRound();
   });
+}
+
+function renderSpellingSectionComplete() {
+  const container = document.getElementById('spelling-game');
+  if (!container) return;
+  const hasNext = spellingSectionIndex < spellingSections.length - 1;
+  setTimeout(() => showCelebration(`${getChildName()}, you finished Spelling Section ${spellingSectionIndex + 1}!`, '🌟'), 300);
+
+  container.innerHTML = `
+    <div class="quiz-card" style="text-align:center">
+      <div style="font-size:4rem;margin-bottom:0.5rem">🌟</div>
+      <h2>Section ${spellingSectionIndex + 1} complete!</h2>
+      <p style="margin:1rem 0;color:var(--ink-light)">Great spelling! What would you like to do next?</p>
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center">
+        ${hasNext ? '<button class="btn btn-primary" id="spelling-next-section">Next Section →</button>' : ''}
+        <button class="btn btn-secondary" id="spelling-replay-section">Replay This Section</button>
+        <button class="btn btn-secondary" id="spelling-choose-section">Choose a Section</button>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('spelling-next-section')?.addEventListener('click', () => {
+    spellingSectionIndex++;
+    spellingData = shuffleArray(spellingSections[spellingSectionIndex]);
+    spellingIndex = 0;
+    renderSpellingRound();
+  });
+  document.getElementById('spelling-replay-section')?.addEventListener('click', () => {
+    spellingData = shuffleArray(spellingSections[spellingSectionIndex]);
+    spellingIndex = 0;
+    renderSpellingRound();
+  });
+  document.getElementById('spelling-choose-section')?.addEventListener('click', renderSpellingSectionPicker);
 }
 
 function initWordScramble() {
@@ -641,14 +786,26 @@ function initWritingPrompts() {
     recordWritingView();
 
     container.innerHTML = `
+      <div class="writing-tag-list">
+        ${prompts.map((pr, i) => `
+          <button class="writing-tag ${pr.type} ${i === current ? 'active' : ''}" data-prompt="${i}">
+            <span class="writing-tag-num">${i + 1}</span>
+            <span class="writing-tag-name">${pr.title}</span>
+          </button>
+        `).join('')}
+      </div>
       <div class="prompt-card">
+        <div class="writing-section-bar">
+          <span class="writing-section-tag">✍️ Writing Prompt ${current + 1} of ${prompts.length}</span>
+          <span class="writing-section-tag type-${p.type}">${p.type === 'narrative' ? '📖 Narrative' : '💬 Persuasive'}</span>
+        </div>
         <span class="prompt-type ${p.type}">${p.type}</span>
         <h3>${p.title}</h3>
         <p style="margin:0.75rem 0;font-size:1.05rem">${p.text}</p>
         <div class="parent-tip">💡 Parent tip: Year 3 NAPLAN writing is on paper (40 min). Print this page or copy the prompt onto lined paper. Let your child plan for 5 minutes, then write freely.</div>
         <h4 style="font-family:var(--font-display);margin:1rem 0 0.5rem">Story Planner</h4>
         <div class="story-planner">
-          <div class="planner-box"><h4>Beginning</h4><textarea placeholder="Who? Where? When?"></textarea></div>
+          <div class="planner-box"><h4>Character &amp; Setting</h4><textarea placeholder="Who is in the story? Where and when?"></textarea></div>
           <div class="planner-box"><h4>Problem</h4><textarea placeholder="What goes wrong?"></textarea></div>
           <div class="planner-box"><h4>Solution</h4><textarea placeholder="How is it fixed?"></textarea></div>
           <div class="planner-box"><h4>Ending</h4><textarea placeholder="How does it end?"></textarea></div>
@@ -671,6 +828,13 @@ function initWritingPrompts() {
         </div>
       </div>
     `;
+
+    container.querySelectorAll('.writing-tag').forEach((tag) => {
+      tag.addEventListener('click', () => {
+        current = parseInt(tag.dataset.prompt, 10);
+        render();
+      });
+    });
 
     container.querySelectorAll('.writing-checklist li').forEach((li) => {
       li.addEventListener('click', () => {

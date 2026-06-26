@@ -477,12 +477,312 @@ function initSnakesAndLadders() {
   render();
 }
 
+/* Memory Match (Year 2) */
+function initMemoryGame() {
+  const container = document.getElementById('memory-game');
+  if (!container) return;
+
+  const icons = ['🐶', '🐱', '🐰', '🦊', '🐸', '🐝', '🐢', '🦋'];
+  let cards = [];
+  let flipped = [];
+  let matched = 0;
+  let moves = 0;
+  let lock = false;
+
+  function setup() {
+    cards = shuffle([...icons, ...icons]).map((icon, i) => ({ id: i, icon, open: false, done: false }));
+    flipped = [];
+    matched = 0;
+    moves = 0;
+    lock = false;
+    render();
+  }
+
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function render() {
+    container.innerHTML = `
+      <div class="quiz-card">
+        <div class="mascot-speech">
+          <span class="mascot-mini">🐨</span>
+          <span>Find the matching pairs! Tap two cards to flip them.</span>
+        </div>
+        <p style="text-align:center;font-weight:700">Pairs found: ${matched} of ${icons.length} · Moves: ${moves}</p>
+        <div class="memory-board">
+          ${cards.map((c) => `
+            <button class="memory-card ${c.open || c.done ? 'open' : ''} ${c.done ? 'done' : ''}" data-id="${c.id}" ${c.done ? 'disabled' : ''}>
+              <span class="memory-front">?</span>
+              <span class="memory-back">${c.icon}</span>
+            </button>
+          `).join('')}
+        </div>
+        <div style="text-align:center;margin-top:1rem">
+          <button class="btn btn-secondary" id="memory-reset">New Game</button>
+        </div>
+      </div>
+    `;
+
+    container.querySelectorAll('.memory-card').forEach((btn) => {
+      btn.addEventListener('click', () => flip(parseInt(btn.dataset.id, 10)));
+    });
+    document.getElementById('memory-reset')?.addEventListener('click', setup);
+  }
+
+  function flip(id) {
+    if (lock) return;
+    const card = cards[id];
+    if (card.open || card.done) return;
+
+    card.open = true;
+    flipped.push(card);
+    render();
+
+    if (flipped.length === 2) {
+      moves++;
+      lock = true;
+      const [a, b] = flipped;
+      if (a.icon === b.icon) {
+        setTimeout(() => {
+          a.done = true;
+          b.done = true;
+          matched++;
+          flipped = [];
+          lock = false;
+          if (matched === icons.length) {
+            cheerOnCorrect('You matched them all!');
+            showCelebration(`${getChildName()}, you found every pair!`, '🧠');
+          }
+          render();
+        }, 500);
+      } else {
+        setTimeout(() => {
+          a.open = false;
+          b.open = false;
+          flipped = [];
+          lock = false;
+          render();
+        }, 900);
+      }
+    }
+  }
+
+  setup();
+}
+
+/* Simon Says — colour memory (Year 2) */
+function initSimonGame() {
+  const container = document.getElementById('simon-game');
+  if (!container) return;
+
+  const pads = [
+    { id: 0, color: '#06d6a0', name: 'green' },
+    { id: 1, color: '#ff6b6b', name: 'red' },
+    { id: 2, color: '#ffd166', name: 'yellow' },
+    { id: 3, color: '#54a0ff', name: 'blue' },
+  ];
+  let sequence = [];
+  let playerStep = 0;
+  let playing = false;
+  let best = 0;
+
+  function render() {
+    container.innerHTML = `
+      <div class="quiz-card">
+        <div class="mascot-speech">
+          <span class="mascot-mini">🦘</span>
+          <span>Watch the colours light up, then tap them in the same order!</span>
+        </div>
+        <p style="text-align:center;font-weight:700">Round: ${sequence.length} · Best: ${best}</p>
+        <div class="simon-board">
+          ${pads.map((p) => `
+            <button class="simon-pad" data-id="${p.id}" style="background:${p.color}"></button>
+          `).join('')}
+        </div>
+        <p class="simon-status" id="simon-status">Press Start to play!</p>
+        <div style="text-align:center">
+          <button class="btn btn-primary" id="simon-start">Start</button>
+        </div>
+      </div>
+    `;
+
+    container.querySelectorAll('.simon-pad').forEach((pad) => {
+      pad.addEventListener('click', () => handlePadClick(parseInt(pad.dataset.id, 10)));
+    });
+    document.getElementById('simon-start')?.addEventListener('click', startGame);
+  }
+
+  function startGame() {
+    sequence = [];
+    playerStep = 0;
+    nextRound();
+  }
+
+  function nextRound() {
+    playerStep = 0;
+    sequence.push(Math.floor(Math.random() * 4));
+    setStatus('Watch carefully...');
+    playSequence();
+  }
+
+  async function playSequence() {
+    playing = true;
+    await delaySimon(600);
+    for (const id of sequence) {
+      await flashPad(id);
+      await delaySimon(250);
+    }
+    playing = false;
+    setStatus('Your turn! Tap the colours.');
+  }
+
+  function flashPad(id) {
+    return new Promise((resolve) => {
+      const pad = container.querySelector(`.simon-pad[data-id="${id}"]`);
+      if (!pad) return resolve();
+      pad.classList.add('lit');
+      beep(id);
+      setTimeout(() => {
+        pad.classList.remove('lit');
+        resolve();
+      }, 450);
+    });
+  }
+
+  function handlePadClick(id) {
+    if (playing || sequence.length === 0) return;
+    flashPad(id);
+
+    if (id === sequence[playerStep]) {
+      playerStep++;
+      if (playerStep === sequence.length) {
+        if (sequence.length > best) best = sequence.length;
+        cheerOnCorrect(`Round ${sequence.length} done!`);
+        setStatus('Great! Next round...');
+        setTimeout(nextRound, 900);
+        updateScore();
+      }
+    } else {
+      setStatus(`Oops! The game reached round ${sequence.length}. Press Start to try again.`);
+      if (sequence.length - 1 > best) best = sequence.length - 1;
+      sequence = [];
+      updateScore();
+    }
+  }
+
+  function updateScore() {
+    const status = container.querySelector('p[style*="text-align:center"]');
+    if (status) status.innerHTML = `Round: ${sequence.length} · Best: ${best}`;
+  }
+
+  function setStatus(text) {
+    const el = document.getElementById('simon-status');
+    if (el) el.textContent = text;
+  }
+
+  function beep(id) {
+    try {
+      const ctx = beep.ctx || (beep.ctx = new (window.AudioContext || window.webkitAudioContext)());
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.frequency.value = [330, 392, 494, 587][id] || 440;
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      gain.gain.value = 0.1;
+      osc.start();
+      osc.stop(ctx.currentTime + 0.25);
+    } catch (_) { /* sound optional */ }
+  }
+
+  function delaySimon(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  render();
+}
+
+/* Counting Fun (Year 2) */
+function initCountingGame() {
+  const container = document.getElementById('counting-game');
+  if (!container) return;
+
+  const critters = ['🍎', '🐢', '🌟', '🐠', '🎈', '🐝', '🍓', '🦋', '🌸', '🚗'];
+
+  function newRound() {
+    const count = 1 + Math.floor(Math.random() * 10);
+    const critter = critters[Math.floor(Math.random() * critters.length)];
+    const options = makeOptions(count);
+
+    container.innerHTML = `
+      <div class="quiz-card">
+        <div class="mascot-speech">
+          <span class="mascot-mini">🐨</span>
+          <span>Count how many you see, then tap the right number!</span>
+        </div>
+        <div class="counting-display">
+          ${Array.from({ length: count }, () => `<span class="counting-item">${critter}</span>`).join('')}
+        </div>
+        <div class="counting-options">
+          ${options.map((n) => `<button class="btn btn-secondary counting-opt" data-n="${n}">${n}</button>`).join('')}
+        </div>
+        <div id="counting-feedback" class="feedback" style="display:none"></div>
+        <div style="text-align:center;margin-top:1rem">
+          <button class="btn btn-secondary" id="counting-next" style="display:none">Next →</button>
+        </div>
+      </div>
+    `;
+
+    container.querySelectorAll('.counting-opt').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const feedback = document.getElementById('counting-feedback');
+        feedback.style.display = 'block';
+        feedback.classList.remove('success', 'hint');
+        if (parseInt(btn.dataset.n, 10) === count) {
+          feedback.classList.add('success');
+          feedback.textContent = cheerOnCorrect(`There are ${count}!`);
+          awardStar('numeracy', 'count-' + Date.now());
+          container.querySelectorAll('.counting-opt').forEach((b) => { b.disabled = true; });
+          document.getElementById('counting-next').style.display = 'inline-flex';
+        } else {
+          feedback.classList.add('hint');
+          feedback.textContent = 'Not quite! Count them again, one by one.';
+        }
+      });
+    });
+
+    document.getElementById('counting-next')?.addEventListener('click', newRound);
+  }
+
+  function makeOptions(answer) {
+    const set = new Set([answer]);
+    while (set.size < 3) {
+      const delta = Math.floor(Math.random() * 5) - 2;
+      const val = answer + delta;
+      if (val >= 1 && val <= 10) set.add(val);
+    }
+    return [...set].sort(() => Math.random() - 0.5);
+  }
+
+  newRound();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initTicTacToe();
   initSnakesAndLadders();
+  initMemoryGame();
+  initSimonGame();
+  initCountingGame();
 
   document.querySelectorAll('.games-tab-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
+      document.querySelectorAll('.games-tab-btn').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
       if (btn.dataset.panel === 'panel-snl') {
         setTimeout(() => window.dispatchEvent(new Event('resize')), 100);
       }

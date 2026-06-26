@@ -70,5 +70,293 @@
     ],
     "explanation": "Use a comma after an opening phrase like \"After school,\".",
     "hint": "Put a comma where you would pause when reading aloud."
+  },
+  {
+    "id": "g7",
+    "question": "Choose the correct word: \"My sister and ___ walked to school.\"",
+    "choices": [
+      { "text": "me", "correct": false },
+      { "text": "I", "correct": true },
+      { "text": "myself", "correct": false },
+      { "text": "us", "correct": false }
+    ],
+    "explanation": "Say it with one person: \"I walked to school\", so \"I\" is correct.",
+    "hint": "Take away 'my sister and' and see which word sounds right."
+  },
+  {
+    "id": "g8",
+    "question": "Which word is a noun? \"The happy dog ran quickly.\"",
+    "choices": [
+      { "text": "happy", "correct": false },
+      { "text": "dog", "correct": true },
+      { "text": "ran", "correct": false },
+      { "text": "quickly", "correct": false }
+    ],
+    "explanation": "A noun is a person, place, animal or thing. \"Dog\" is a noun.",
+    "hint": "Which word names an animal?"
+  },
+  {
+    "id": "g9",
+    "question": "Which word is a verb (doing word)? \"She kicked the ball.\"",
+    "choices": [
+      { "text": "She", "correct": false },
+      { "text": "kicked", "correct": true },
+      { "text": "the", "correct": false },
+      { "text": "ball", "correct": false }
+    ],
+    "explanation": "\"Kicked\" is the action, so it is the verb.",
+    "hint": "Which word shows an action?"
+  },
+  {
+    "id": "g10",
+    "question": "Choose the correct word: \"There ___ three cats on the fence.\"",
+    "choices": [
+      { "text": "is", "correct": false },
+      { "text": "are", "correct": true },
+      { "text": "was", "correct": false },
+      { "text": "am", "correct": false }
+    ],
+    "explanation": "Three cats is plural, so we use \"are\".",
+    "hint": "More than one cat — is or are?"
+  },
+  {
+    "id": "g11",
+    "question": "What is the plural of \"baby\"?",
+    "choices": [
+      { "text": "babys", "correct": false },
+      { "text": "babies", "correct": true },
+      { "text": "babyes", "correct": false },
+      { "text": "babi", "correct": false }
+    ],
+    "explanation": "When a word ends in a consonant + y, change y to ies: babies.",
+    "hint": "Change the 'y' before adding the ending."
+  },
+  {
+    "id": "g12",
+    "question": "Choose the correct word: \"I have ___ apple for lunch.\"",
+    "choices": [
+      { "text": "a", "correct": false },
+      { "text": "an", "correct": true },
+      { "text": "the the", "correct": false },
+      { "text": "some a", "correct": false }
+    ],
+    "explanation": "Use \"an\" before a word starting with a vowel sound, like apple.",
+    "hint": "Apple starts with a vowel sound."
+  },
+  {
+    "id": "g13",
+    "question": "Which sentence uses capital letters correctly?",
+    "choices": [
+      { "text": "we live in melbourne.", "correct": false },
+      { "text": "We live in Melbourne.", "correct": true },
+      { "text": "we Live In Melbourne.", "correct": false },
+      { "text": "We live in melbourne.", "correct": false }
+    ],
+    "explanation": "Start a sentence with a capital, and use a capital for place names like Melbourne.",
+    "hint": "The first word and the city's name both need capitals."
+  },
+  {
+    "id": "g14",
+    "question": "Choose the correct word: \"The dog wagged ___ tail.\"",
+    "choices": [
+      { "text": "its", "correct": true },
+      { "text": "it's", "correct": false },
+      { "text": "its'", "correct": false },
+      { "text": "it is", "correct": false }
+    ],
+    "explanation": "\"Its\" shows belonging. \"It's\" means \"it is\".",
+    "hint": "Does the tail belong to the dog, or are you saying 'it is'?"
+  },
+  {
+    "id": "g15",
+    "question": "Which is the past tense of \"run\"?",
+    "choices": [
+      { "text": "runned", "correct": false },
+      { "text": "ran", "correct": true },
+      { "text": "running", "correct": false },
+      { "text": "runs", "correct": false }
+    ],
+    "explanation": "The past tense of \"run\" is \"ran\".",
+    "hint": "Yesterday I ___ to the shop."
+  },
+  {
+    "id": "g16",
+    "question": "Choose the correct word: \"Can you ___ me your pencil?\"",
+    "choices": [
+      { "text": "borrow", "correct": false },
+      { "text": "lend", "correct": true },
+      { "text": "lent", "correct": false },
+      { "text": "borrowed", "correct": false }
+    ],
+    "explanation": "You lend something to someone; you borrow something from someone.",
+    "hint": "The person giving the pencil is doing this action."
+  },
+  {
+    "id": "g17",
+    "question": "Which word is an adjective (describing word)? \"The tall tree swayed.\"",
+    "choices": [
+      { "text": "tall", "correct": true },
+      { "text": "tree", "correct": false },
+      { "text": "swayed", "correct": false },
+      { "text": "the", "correct": false }
+    ],
+    "explanation": "\"Tall\" describes the tree, so it is an adjective.",
+    "hint": "Which word tells you what the tree is like?"
+  },
+  {
+    "id": "g18",
+    "question": "Choose the correct word: \"We ___ our lunch at the park.\"",
+    "choices": [
+      { "text": "eated", "correct": false },
+      { "text": "ate", "correct": true },
+      { "text": "eaten", "correct": false },
+      { "text": "eating", "correct": false }
+    ],
+    "explanation": "The past tense of \"eat\" is \"ate\".",
+    "hint": "Yesterday we ___ pizza."
+  },
+  {
+    "id": "g19",
+    "question": "Which sentence is a question?",
+    "choices": [
+      { "text": "The sky is blue.", "correct": false },
+      { "text": "Where are my shoes?", "correct": true },
+      { "text": "I like ice cream.", "correct": false },
+      { "text": "Close the door.", "correct": false }
+    ],
+    "explanation": "A question asks something and ends with a question mark.",
+    "hint": "Look for the sentence that asks something."
+  },
+  {
+    "id": "g20",
+    "question": "Choose the correct word: \"This is ___ book, not yours.\"",
+    "choices": [
+      { "text": "my", "correct": true },
+      { "text": "mine my", "correct": false },
+      { "text": "me", "correct": false },
+      { "text": "I", "correct": false }
+    ],
+    "explanation": "\"My\" shows the book belongs to me.",
+    "hint": "Which word shows the book belongs to you?"
+  },
+  {
+    "id": "g21",
+    "question": "Add an apostrophe correctly: \"The cat belonging to Sam.\"",
+    "choices": [
+      { "text": "Sams cat", "correct": false },
+      { "text": "Sam's cat", "correct": true },
+      { "text": "Sams' cat", "correct": false },
+      { "text": "Sam cat's", "correct": false }
+    ],
+    "explanation": "Use 's to show something belongs to Sam: Sam's cat.",
+    "hint": "Add 's after the owner's name."
+  },
+  {
+    "id": "g22",
+    "question": "Choose the correct word: \"I am ___ than my little brother.\"",
+    "choices": [
+      { "text": "tall", "correct": false },
+      { "text": "taller", "correct": true },
+      { "text": "tallest", "correct": false },
+      { "text": "more tall", "correct": false }
+    ],
+    "explanation": "When comparing two people, use \"taller\".",
+    "hint": "You are comparing just two people."
+  },
+  {
+    "id": "g23",
+    "question": "Which word joins the two parts? \"I was tired ___ I went to bed.\"",
+    "choices": [
+      { "text": "so", "correct": true },
+      { "text": "but", "correct": false },
+      { "text": "or", "correct": false },
+      { "text": "if", "correct": false }
+    ],
+    "explanation": "\"So\" shows the result — being tired led to going to bed.",
+    "hint": "Which word shows what happened because you were tired?"
+  },
+  {
+    "id": "g24",
+    "question": "Choose the correct spelling word: \"We had a ___ time at the beach.\"",
+    "choices": [
+      { "text": "grate", "correct": false },
+      { "text": "great", "correct": true },
+      { "text": "graet", "correct": false },
+      { "text": "greate", "correct": false }
+    ],
+    "explanation": "\"Great\" means very good. \"Grate\" is something you grate cheese on.",
+    "hint": "Which spelling means 'very good'?"
+  },
+  {
+    "id": "g25",
+    "question": "Which sentence ends with the correct mark? \"Watch out for that car\"",
+    "choices": [
+      { "text": "Watch out for that car.", "correct": false },
+      { "text": "Watch out for that car!", "correct": true },
+      { "text": "Watch out for that car?", "correct": false },
+      { "text": "Watch out for that car,", "correct": false }
+    ],
+    "explanation": "This shows strong feeling or a warning, so it needs an exclamation mark.",
+    "hint": "It is a warning that shows strong feeling."
+  },
+  {
+    "id": "g26",
+    "question": "Choose the correct word: \"She sings ___ than her friend.\"",
+    "choices": [
+      { "text": "good", "correct": false },
+      { "text": "better", "correct": true },
+      { "text": "best", "correct": false },
+      { "text": "gooder", "correct": false }
+    ],
+    "explanation": "When comparing two singers, use \"better\".",
+    "hint": "Comparing two people — good becomes what?"
+  },
+  {
+    "id": "g27",
+    "question": "Which word is spelled correctly?",
+    "choices": [
+      { "text": "freind", "correct": false },
+      { "text": "friend", "correct": true },
+      { "text": "frend", "correct": false },
+      { "text": "friynd", "correct": false }
+    ],
+    "explanation": "Remember: a friend is there to the end — friend.",
+    "hint": "It has 'i' before 'e' here."
+  },
+  {
+    "id": "g28",
+    "question": "Choose the correct word: \"Please put the toys in ___ box.\"",
+    "choices": [
+      { "text": "they", "correct": false },
+      { "text": "their", "correct": true },
+      { "text": "there", "correct": false },
+      { "text": "they're", "correct": false }
+    ],
+    "explanation": "\"Their\" shows the box belongs to them.",
+    "hint": "Which word shows belonging?"
+  },
+  {
+    "id": "g29",
+    "question": "Which sentence is correct?",
+    "choices": [
+      { "text": "He don't like peas.", "correct": false },
+      { "text": "He doesn't like peas.", "correct": true },
+      { "text": "He not like peas.", "correct": false },
+      { "text": "He no like peas.", "correct": false }
+    ],
+    "explanation": "With he/she/it, use \"doesn't\".",
+    "hint": "He ___ like peas — don't or doesn't?"
+  },
+  {
+    "id": "g30",
+    "question": "What is the plural of \"foot\"?",
+    "choices": [
+      { "text": "foots", "correct": false },
+      { "text": "feet", "correct": true },
+      { "text": "feets", "correct": false },
+      { "text": "footes", "correct": false }
+    ],
+    "explanation": "\"Foot\" is irregular — the plural is \"feet\".",
+    "hint": "One foot, two ___."
   }
 ]
