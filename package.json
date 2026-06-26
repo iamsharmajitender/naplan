@@ -1,0 +1,11 @@
+{
+  "name": "naplan-adventure",
+  "private": true,
+  "description": "NAPLAN Year 3 practice site — static HTML/CSS/JS",
+  "scripts": {
+    "start": "serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
