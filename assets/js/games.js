@@ -274,6 +274,7 @@ function initSnakesAndLadders() {
     const board = document.getElementById('snl-board');
     if (!board) return;
     const boardRect = board.getBoundingClientRect();
+    if (!boardRect.width || !boardRect.height) return;
     board.querySelectorAll('.snl-cell').forEach((cell) => {
       const num = parseInt(cell.dataset.num, 10);
       const rect = cell.getBoundingClientRect();
@@ -322,10 +323,13 @@ function initSnakesAndLadders() {
     const pos = players[playerIdx].pos;
     const center = cellCenters[pos];
     if (!token || !center) return;
+    if (!isFinite(center.x) || !isFinite(center.y)) return;
 
     const offset = playerIdx === 0 ? -4 : 4;
-    token.style.left = `calc(${center.x}% + ${offset}px)`;
-    token.style.top = `calc(${center.y}% + ${offset}px)`;
+    const sign = offset < 0 ? '-' : '+';
+    const mag = Math.abs(offset);
+    token.style.left = `calc(${center.x}% ${sign} ${mag}px)`;
+    token.style.top = `calc(${center.y}% ${sign} ${mag}px)`;
     token.classList.toggle('sliding', !!sliding);
     if (animate) {
       token.classList.add('hopping');

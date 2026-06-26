@@ -969,10 +969,10 @@ function initProgressPage() {
 
   const p = getProgress();
   const domains = [
-    { key: 'reading', icon: '📚', name: 'Reading Reef', color: 'reading', total: 8 },
+    { key: 'reading', icon: '📚', name: 'Reading Reef', color: 'reading', total: 67 },
     { key: 'writing', icon: '✏️', name: 'Writing Workshop', color: 'writing', total: 12 },
-    { key: 'language', icon: '🌊', name: 'Language Lagoon', color: 'language', total: 20 },
-    { key: 'numeracy', icon: '🔢', name: 'Number Neighbourhood', color: 'numeracy', total: 15 },
+    { key: 'language', icon: '🌊', name: 'Language Lagoon', color: 'language', total: 30 },
+    { key: 'numeracy', icon: '🔢', name: 'Number Neighbourhood', color: 'numeracy', total: 80 },
   ];
 
   const domainProgress = (key) => {
@@ -1031,10 +1031,15 @@ function initProgressPage() {
   `;
 
   document.getElementById('reset-progress')?.addEventListener('click', () => {
-    if (confirm('Reset all stars and badges? This cannot be undone.')) {
+    if (confirm('Reset all stars, badges, streaks and your name? This starts a fresh adventure and cannot be undone.')) {
       localStorage.removeItem(STORAGE_KEY);
-      initProgressPage();
+      localStorage.removeItem(SESSION_KEY);
+      saveProgress(defaultProgress());
       updateHeaderStars(defaultProgress());
+      initProgressPage();
+      const nameHeading = document.getElementById('progress-child-name');
+      if (nameHeading) nameHeading.textContent = 'My Progress';
+      alert('All done! Progress has been reset.');
     }
   });
 }

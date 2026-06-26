@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="20 fun short stories for Year 2 and Year 3 students in Australia to read and enjoy.">
   <meta name="base-path" content="">
-  <title>My Progress — NAPLAN Adventure</title>
+  <title>Story Library — NAPLAN Adventure</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/stories.css">
 </head>
 <body>
   <header class="site-header">
@@ -40,12 +42,23 @@
 
   <main>
     <section class="page-hero">
-      <div class="page-icon">🏆</div>
-      <h1 id="progress-child-name">My Progress</h1>
-      <p>See your stars, streaks, and badges! Progress is saved on this device.</p>
+      <div class="page-icon">📖</div>
+      <h1>Story Library</h1>
+      <p>20 fun short stories to read just for the joy of it. Pick a cover and start reading!</p>
     </section>
 
-    <div class="container" id="progress-content"></div>
+    <div class="container">
+      <div class="parent-tip">💡 Parent tip: Reading for fun builds vocabulary and confidence. Try reading together — take turns reading a paragraph each, and chat about the "I wonder..." questions at the end.</div>
+
+      <div class="story-filters" id="story-filters">
+        <button class="story-filter active" data-level="all">All Stories</button>
+        <button class="story-filter" data-level="Year 2">Year 2</button>
+        <button class="story-filter" data-level="Year 3">Year 3</button>
+      </div>
+
+      <div id="story-library" class="story-grid"></div>
+      <div id="story-reader" class="story-reader hidden"></div>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -53,6 +66,6 @@
   </footer>
 
   <script src="assets/js/progress.js"></script>
-  <script src="assets/js/app.js"></script>
+  <script src="assets/js/stories.js"></script>
 </body>
 </html>
