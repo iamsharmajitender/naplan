@@ -785,8 +785,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.games-tab-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
-      document.querySelectorAll('.games-tab-btn').forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
       if (btn.dataset.panel === 'panel-snl') {
         setTimeout(() => window.dispatchEvent(new Event('resize')), 100);
       }

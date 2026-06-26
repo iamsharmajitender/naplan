@@ -1,5 +1,19 @@
 /* Games — Tic Tac Toe & Snakes & Ladders */
 
+.games-all-tabs {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: center;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.games-all-tabs .tab-btn {
+  flex-shrink: 0;
+  font-size: 0.88rem;
+  padding: 0.55rem 1rem;
+}
+
 .games-tab-btn.active {
   background: linear-gradient(135deg, #f472b6, #ec4899);
   border-color: #ec4899;
@@ -52,9 +66,9 @@
 
 .ttt-board {
   display: grid;
-  grid-template-columns: repeat(3, minmax(80px, 110px));
-  gap: 8px;
-  padding: 12px;
+  grid-template-columns: repeat(3, minmax(100px, 150px));
+  gap: 10px;
+  padding: 14px;
   background: linear-gradient(145deg, #2a9d8f, #4ecdc4);
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
@@ -65,7 +79,7 @@
   background: var(--white);
   border: none;
   border-radius: var(--radius-sm);
-  font-size: 3rem;
+  font-size: 4rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -153,8 +167,8 @@
 }
 
 .snl-dice {
-  width: 72px;
-  height: 72px;
+  width: 88px;
+  height: 88px;
   background: var(--white);
   border-radius: 14px;
   box-shadow: 0 6px 0 #cbd5e1, var(--shadow-lg);
@@ -180,8 +194,8 @@
 }
 
 .snl-dice .dot {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   background: var(--ink);
   border-radius: 50%;
   margin: auto;
@@ -203,8 +217,8 @@
 
 .snl-board-outer {
   position: relative;
-  width: min(520px, 95vw);
-  padding: 12px;
+  width: min(720px, 98vw);
+  padding: 14px;
   background: linear-gradient(145deg, #7c3aed, #a78bfa);
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
@@ -224,7 +238,7 @@
 
 .snl-cell {
   position: relative;
-  font-size: clamp(0.45rem, 1.8vw, 0.7rem);
+  font-size: clamp(0.55rem, 2.2vw, 0.85rem);
   font-weight: 700;
   display: flex;
   align-items: flex-start;
@@ -240,7 +254,7 @@
 .snl-cell.finish { background: linear-gradient(135deg, #fcd34d, #f59e0b); font-weight: 800; }
 
 .snl-cell .cell-num { opacity: 0.7; line-height: 1; }
-.snl-cell .cell-icon { position: absolute; bottom: 1px; right: 1px; font-size: clamp(0.6rem, 2vw, 0.85rem); }
+.snl-cell .cell-icon { position: absolute; bottom: 1px; right: 1px; font-size: clamp(0.75rem, 2.5vw, 1.05rem); }
 
 .snl-tokens-layer {
   position: absolute;
@@ -251,7 +265,7 @@
 
 .snl-token {
   position: absolute;
-  font-size: clamp(1.1rem, 4vw, 1.6rem);
+  font-size: clamp(1.4rem, 5vw, 2.1rem);
   transform: translate(-50%, -50%);
   transition: left 0.35s ease-in-out, top 0.35s ease-in-out;
   z-index: 10;
@@ -423,9 +437,73 @@
   min-width: 64px;
 }
 
+/* Bigger Tic Tac Toe & Snakes & Ladders game areas only */
+#panel-ttt,
+#panel-snl {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#panel-ttt .quiz-card,
+#panel-snl .quiz-card {
+  padding: 2rem 1.5rem;
+}
+
+#panel-ttt .ttt-board {
+  grid-template-columns: repeat(3, minmax(120px, 170px));
+  gap: 12px;
+  padding: 18px;
+}
+
+#panel-ttt .ttt-cell {
+  font-size: 4.5rem;
+}
+
+#panel-ttt .ttt-status {
+  font-size: 1.35rem;
+}
+
+#panel-ttt .ttt-player {
+  font-size: 1.05rem;
+  padding: 0.65rem 1.25rem;
+}
+
+#panel-snl .snl-board-outer {
+  width: min(780px, 99vw);
+  padding: 16px;
+}
+
+#panel-snl .snl-dice {
+  width: 100px;
+  height: 100px;
+  padding: 12px;
+}
+
+#panel-snl .snl-dice .dot {
+  width: 16px;
+  height: 16px;
+}
+
+#panel-snl .snl-player-card {
+  padding: 0.85rem 1.5rem;
+  font-size: 1.05rem;
+}
+
+#panel-snl .snl-player-card .token-icon {
+  font-size: 2.2rem;
+}
+
+#panel-snl .snl-message {
+  font-size: 1.15rem;
+  max-width: 680px;
+}
+
 @media (max-width: 600px) {
-  .ttt-board { grid-template-columns: repeat(3, minmax(70px, 90px)); }
-  .ttt-cell { font-size: 2.2rem; }
+  .ttt-board { grid-template-columns: repeat(3, minmax(90px, 110px)); }
+  .ttt-cell { font-size: 3rem; }
+  #panel-ttt .ttt-board { grid-template-columns: repeat(3, minmax(95px, 115px)); }
+  #panel-ttt .ttt-cell { font-size: 3.2rem; }
+  #panel-snl .snl-board-outer { width: min(100vw - 2rem, 680px); }
   .snl-player-card { padding: 0.5rem 0.85rem; font-size: 0.85rem; }
   .memory-board { gap: 0.5rem; }
   .memory-card { font-size: 1.6rem; }
